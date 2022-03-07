@@ -24,7 +24,7 @@
 <meta property="og:description" content="关于配置fulid主题的记录">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-07T01:39:53.000Z">
-<meta property="article:modified_time" content="2022-03-07T09:07:44.635Z">
+<meta property="article:modified_time" content="2022-03-07T11:21:14.400Z">
 <meta property="article:author" content="Dongdong Chen">
 <meta property="article:tag" content="还没想好">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      1.2k 字
     </span>
   
 
@@ -289,7 +289,10 @@
 <p>在config中post字段，views的enable改成true</p>
 <h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>使用gittalk插件</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/settings/applications/new">注册链接</a></p>
-<p>Homepage URL &amp; Authorization callback URL 填写 <a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> ，注意要带上http://，否则会提示错误URL</p>
+<p>Homepage URL &amp; Authorization callback URL 填写 <a target="_blank" rel="noopener" href="http://username.github.io/">http://username.github.io</a> ，注意要带上https://，否则会提示错误URL</p>
+<blockquote>
+<p>⚠️注意：是 <code>https</code>，不要漏掉s，否则验证的时候会重定向回主页，无法正确初始化</p>
+</blockquote>
 <p>注册好后跳转到对应页面，生成一个clien secret，获得clientId &amp; clientSecret</p>
 <p>在主题配置中修改找到 <code>comments</code> 和 <code>gittalk</code> 段，修改相关信息</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">comments:</span><br>	<span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br>	<span class="hljs-attr">type:</span> <span class="hljs-string">gitalk</span><br></code></pre></td></tr></table></figure>
@@ -337,7 +340,7 @@
                     
                     
                       <a href="/2022/03/06/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8Btroubleshooting/">
-                        <span class="hidden-mobile">博客搭建指南之troubleshooting</span>
+                        <span class="hidden-mobile">5.博客搭建指南之troubleshooting</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
