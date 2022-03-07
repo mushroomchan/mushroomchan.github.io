@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>wandb使用记录</title>
+    <link href="/2022/03/07/wandb%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
+    <url>/2022/03/07/wandb%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><code>pip install wandb</code></p><h3 id="登陆"><a href="#登陆" class="headerlink" title="登陆"></a>登陆</h3><p>wandb.ai 登陆  <a href="https://wandb.ai/site">https://wandb.ai/site</a></p><p>点击头像 setting</p><p>生成并拷贝 API keys</p><p><code>wandb login</code></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>einops包使用记录</title>
+    <link href="/2022/03/07/einops%E5%8C%85%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
+    <url>/2022/03/07/einops%E5%8C%85%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><code>pip install einops</code></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>效率工具方法</title>
     <link href="/2022/03/07/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95/"/>
     <url>/2022/03/07/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%96%B9%E6%B3%95/</url>
@@ -30,7 +56,7 @@
   
   
   <entry>
-    <title>博客搭建指南之知识收集</title>
+    <title>4.博客搭建指南之知识收集</title>
     <link href="/2022/03/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8B%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86/"/>
     <url>/2022/03/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8B%E7%9F%A5%E8%AF%86%E6%94%B6%E9%9B%86/</url>
     
@@ -53,7 +79,7 @@
     <link href="/2022/03/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8Bfluid%E4%B8%BB%E9%A2%98/"/>
     <url>/2022/03/07/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8Bfluid%E4%B8%BB%E9%A2%98/</url>
     
-    <content type="html"><![CDATA[<p>在好几个主题里看了下，考虑了加速性能和好看程度选择了这个</p><p>下面就是安装记录啦</p><blockquote><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">Github仓库</a></p><p><a href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">配置指南</a></p></blockquote><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ol><li><p>在博客目录执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">npm install --save hex-theme-fluid<br></code></pre></td></tr></table></figure><p>通过 npm 安装的话 <code>～/themes/</code> 下不会有新文件产生。还有另一种安装方法是下载 release 版本代码，未尝试。</p></li><li><p>在博客目录下创建<code>/_config.fluid.yml</code>，将github仓库中<a href="">_config.yml</a>内容复制进去。</p></li><li><p>在<code>~/_config.yml</code>中的主题修改了fluid</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span><br></code></pre></td></tr></table></figure></li><li><p>创建[关于页]</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure></li></ol><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li>“<strong>博客配置</strong>“ 指的 Hexo 博客目录下的 <code>_config.yml</code>，”<strong>主题配置</strong>“ 指的是 <code>theme/fluid/_config.yml</code> 或者 <code>_config.fluid.yml</code></li><li>每次无论 <code>hexo g</code> 或 <code>hexo s</code>，都最好先使用 <code>hexo clean</code> 清除本地缓存</li></ol><h3 id="网页统计"><a href="#网页统计" class="headerlink" title="网页统计"></a>网页统计</h3><p>使用百度的，用百度账号开通</p><p>网络域名和网站首页填写  <code>username.github.io</code> 或者你的域名，点链接可以跳转到网站就是ok了</p><p>使用代码安装检查 一开始显示未检测 配置需等待一段时间才成功</p><p><del>网站显示后，页面好像没有出现统计信息</del> 笑死 根本不是一个东西</p><p>网页统计和PV/UV统计是两种东西啊</p><p>网页统计是统计访问量信息地域那些，PV/UV是显示网页文章访问次数</p><h3 id="PV-UV统计"><a href="#PV-UV统计" class="headerlink" title="PV/UV统计"></a>PV/UV统计</h3><p>使用不蒜子，不用注册账号</p><p>在config里开通，访问量是别人的呀？哦 localhost显示的不是真正的</p><p>显示了总的，怎么显示每一篇文章的呢？</p><p>在config中post字段，views的enable改成true</p><h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>使用gittalk插件</p><p><a href="https://github.com/settings/applications/new">注册链接</a></p><p>Homepage URL &amp; Authorization callback URL 填写 <a href="http://username.github.io/">http://username.github.io</a> ，注意要带上https://，否则会提示错误URL</p><blockquote><p>⚠️注意：是 <code>https</code>，不要漏掉s，否则验证的时候会重定向回主页，无法正确初始化</p></blockquote><p>注册好后跳转到对应页面，生成一个clien secret，获得clientId &amp; clientSecret</p><p>在主题配置中修改找到 <code>comments</code> 和 <code>gittalk</code> 段，修改相关信息</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">comments:</span><br><span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">type:</span> <span class="hljs-string">gitalk</span><br></code></pre></td></tr></table></figure><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">gitalk:</span><br>  <span class="hljs-attr">clientID:</span><br>  <span class="hljs-attr">clientSecret:</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">mushroomchan.github.io</span><br>  <span class="hljs-attr">owner:</span> <span class="hljs-string">mushroomchan</span><br></code></pre></td></tr></table></figure><p>只要文章页面登录过github，就会自动创建评论框。每次写完文章后登陆一下文章页面。在文章页面点击登陆会回跳到博客首页，一个<a href="">解决方案</a>。而我从safari换到chrome就可以到授权页面。</p><p>好像并没有搞明白这个登陆创建怎么搞？</p><h3 id="修改文章URL"><a href="#修改文章URL" class="headerlink" title="修改文章URL"></a>修改文章URL</h3><h3 id="指定摘要"><a href="#指定摘要" class="headerlink" title="指定摘要"></a>指定摘要</h3><p>在post格式中加个 <code>excerpt</code> 字段</p><h3 id="相关问题与解决"><a href="#相关问题与解决" class="headerlink" title="相关问题与解决"></a>相关问题与解决</h3>]]></content>
+    <content type="html"><![CDATA[<p>在好几个主题里看了下，考虑了加速性能和好看程度选择了这个</p><p>下面就是安装记录啦</p><blockquote><p><a href="https://github.com/fluid-dev/hexo-theme-fluid">Github仓库</a></p><p><a href="https://hexo.fluid-dev.com/docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">配置指南</a></p></blockquote><h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><ol><li><p>在博客目录执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><pre><code class="hljs bash">npm install --save hex-theme-fluid<br></code></pre></td></tr></table></figure><p>通过 npm 安装的话 <code>～/themes/</code> 下不会有新文件产生。还有另一种安装方法是下载 release 版本代码，未尝试。</p></li><li><p>在博客目录下创建<code>/_config.fluid.yml</code>，将github仓库中<a href="">_config.yml</a>内容复制进去。</p></li><li><p>在<code>~/_config.yml</code>中的主题修改了fluid</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span><br></code></pre></td></tr></table></figure></li><li><p>创建[关于页]</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure></li></ol><h3 id="涉及配置文件"><a href="#涉及配置文件" class="headerlink" title="涉及配置文件"></a>涉及配置文件</h3><ol><li>“<strong>博客配置</strong>“ 指的 Hexo 博客目录下的 <code>_config.yml</code>，”<strong>主题配置</strong>“ 指的是 <code>theme/fluid/_config.yml</code> 或者 <code>_config.fluid.yml</code></li><li>每次无论 <code>hexo g</code> 或 <code>hexo s</code>，都最好先使用 <code>hexo clean</code> 清除本地缓存</li></ol><h3 id="网页统计"><a href="#网页统计" class="headerlink" title="网页统计"></a>网页统计</h3><p>使用百度的，用百度账号开通</p><p>网络域名和网站首页填写  <code>username.github.io</code> 或者你的域名，点链接可以跳转到网站就是ok了</p><p>使用代码安装检查 一开始显示未检测 配置需等待一段时间才成功</p><p><del>网站显示后，页面好像没有出现统计信息</del> 笑死 根本不是一个东西</p><p>网页统计和PV/UV统计是两种东西啊</p><p>网页统计是统计访问量信息地域那些，PV/UV是显示网页文章访问次数</p><h3 id="PV-UV统计"><a href="#PV-UV统计" class="headerlink" title="PV/UV统计"></a>PV/UV统计</h3><p>使用不蒜子，不用注册账号</p><p>在config里开通，访问量是别人的呀？哦 localhost显示的不是真正的</p><p>显示了总的，怎么显示每一篇文章的呢？</p><p>在config中post字段，views的enable改成true</p><h3 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h3><p>使用gittalk插件</p><p><a href="https://github.com/settings/applications/new">注册链接</a></p><p>Homepage URL &amp; Authorization callback URL 填写 <a href="http://username.github.io/">http://username.github.io</a> ，注意要带上https://，否则会提示错误URL</p><blockquote><p>⚠️注意：是 <code>https</code>，不要漏掉s，否则验证的时候会重定向回主页，无法正确初始化</p></blockquote><p>注册好后跳转到对应页面，生成一个clien secret，获得clientId &amp; clientSecret</p><p>在主题配置中修改找到 <code>comments</code> 和 <code>gittalk</code> 段，修改相关信息</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">comments:</span><br><span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">type:</span> <span class="hljs-string">gitalk</span><br></code></pre></td></tr></table></figure><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">gitalk:</span><br>  <span class="hljs-attr">clientID:</span><br>  <span class="hljs-attr">clientSecret:</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">mushroomchan.github.io</span><br>  <span class="hljs-attr">owner:</span> <span class="hljs-string">mushroomchan</span><br></code></pre></td></tr></table></figure><p>只要文章页面登录过github，就会自动创建评论框。每次写完文章后登陆一下文章页面。在文章页面点击登陆会回跳到博客首页，一个<a href="">解决方案</a>。而我从safari换到chrome就可以到授权页面。</p><p>好像并没有搞明白这个登陆创建怎么搞？</p><h3 id="修改文章URL"><a href="#修改文章URL" class="headerlink" title="修改文章URL"></a>修改文章URL</h3><h3 id="指定摘要"><a href="#指定摘要" class="headerlink" title="指定摘要"></a>指定摘要</h3><p>在post格式中加个 <code>excerpt</code> 字段</p><h3 id="文章排序"><a href="#文章排序" class="headerlink" title="文章排序"></a>文章排序</h3><p>给分类中的文章排序，</p><h3 id="相关问题与解决"><a href="#相关问题与解决" class="headerlink" title="相关问题与解决"></a>相关问题与解决</h3>]]></content>
     
     
     <categories>
@@ -119,7 +145,7 @@
   
   
   <entry>
-    <title>博客搭建指南之来日方长</title>
+    <title>6.博客搭建指南之来日方长</title>
     <link href="/2022/03/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8B%E6%9D%A5%E6%97%A5%E6%96%B9%E9%95%BF/"/>
     <url>/2022/03/04/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97%E4%B9%8B%E6%9D%A5%E6%97%A5%E6%96%B9%E9%95%BF/</url>
     
