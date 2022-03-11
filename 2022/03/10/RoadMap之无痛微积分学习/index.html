@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Dongdong Chen">
+  <meta name="keywords" content="还没想好">
+  
+    <meta name="description" content="关于学习微积分的RoadMap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RoadMap之无痛微积分学习">
+<meta property="og:url" content="http://example.com/2022/03/10/RoadMap%E4%B9%8B%E6%97%A0%E7%97%9B%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="🍄蘑菇的碎碎念基地">
+<meta property="og:description" content="关于学习微积分的RoadMap">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-10T02:12:49.000Z">
+<meta property="article:modified_time" content="2022-03-11T14:08:50.129Z">
+<meta property="article:author" content="Dongdong Chen">
+<meta property="article:tag" content="还没想好">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>RoadMap之无痛微积分学习 - 🍄蘑菇的碎碎念基地</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c88d93a98ba2e164b72952026234ced7","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>🍄蘑菇的碎碎念基地</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="RoadMap之无痛微积分学习">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Dongdong Chen
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-10 10:12" pubdate>
+        2022年3月10日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">RoadMap之无痛微积分学习</h1>
+            
+            <div class="markdown-body">
+              <p>现在状态：</p>
+<ol>
+<li>学过微积分，但学得不是很好</li>
+<li>在学习工作中不是经常使用，但还是有用到的概率</li>
+</ol>
+<p>期望状态：</p>
+<ol>
+<li>达到高级新手水平</li>
+<li>满足学习工作中的应用需求</li>
+</ol>
+<blockquote>
+<ul>
+<li>对微分方程使用极限定义和微分规则</li>
+<li>使用渐近线，关键点画函数草图，使用微分测试函数的增减性，凸凹性</li>
+<li>使用微分求解应用最大最小问题</li>
+<li>使用微分求解related rate 问题</li>
+<li>使用黎曼和和积分基础理论估计积分</li>
+<li>使用高级积分技巧算积分，such as inverse substitution, partial fractions and integration by parts.</li>
+<li>使用 L hosptial rule 来evaluate certain indefinite forms</li>
+<li>确定不定积分的收敛性，计算不定积分的convergent</li>
+<li>找到函数一个点附近的泰勒级数展开</li>
+</ul>
+</blockquote>
+<p>困难与疑虑：</p>
+<ol>
+<li>不知道该如何学</li>
+<li>希望有系统性框架，但由于不是十分需要，又不想花费过多时间</li>
+<li>害怕微分方程</li>
+</ol>
+<h2 id="输入源选择"><a href="#输入源选择" class="headerlink" title="输入源选择"></a>输入源选择</h2><ol>
+<li><p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2005/">MIT 18.01 single variable calculus @Prof. Jason Starr</a></p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2005/calendar/">日程表</a></li>
+<li>阅读材料</li>
+<li>课程笔记</li>
+<li>作业</li>
+<li>考试</li>
+<li>学习材料</li>
+</ul>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/index.htm">MIT 18.01SC single variable calculus @Prof. David Jerison</a></p>
+<blockquote>
+<p>SC 课程指 self-contained，专门为自学者设计的课程</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-02-multivariable-calculus-spring-2006/">MIT 18.02 multivariable calculus @Prof. David Jerison @Prof. Arthur Mattuck</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/">MIT 18.02SC multivariable calculus @Prof. Denis Auroux</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers">HKUST vector-calculus for engineers </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://open.163.com/newview/movie/courseintro?newurl=/special/opencourse/weijifen.html">微积分重点 @Prof. Gilbert Strang</a></p>
+</li>
+<li><p>[MIT 教材] Simmons, George F. <em>Calculus with Analytic Geometry</em>. 2nd ed. New York, NY: McGraw-Hill, October 1, 1995. ISBN: 007</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pimbook.org/">A Programmer’s Introduction to Mathematics</a> 【包括线代和微积分，有空仔细看看，书】</p>
+</li>
+</ol>
+<p>框架： </p>
+<p><a target="_blank" rel="noopener" href="https://www.mubucm.com/doc/r7L8M9hWlH">我的框架</a></p>
+<p>基于输入源整理</p>
+<h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>总时长：150 hours + 150 hours 【一元&amp;多元】</p>
+<p>路径：HKUST course 为主 MIT SC 为辅</p>
+<p>开始时间：2022年3月10日</p>
+<h2 id="听课记录"><a href="#听课记录" class="headerlink" title="听课记录"></a>听课记录</h2><h3 id="3月10日"><a href="#3月10日" class="headerlink" title="3月10日"></a>3月10日</h3><ul>
+<li><p><input checked="" disabled="" type="checkbox">  Welcome ｜ 关于课程的整体介绍，功能onboarding</p>
+<blockquote>
+<p>2 Video: 6min</p>
+<p>3 Reading: 3min</p>
+<p>1 Quiz: 15min</p>
+<p>1 Discuss: 1min</p>
+<p>Sum: 25 min</p>
+<p>——————————————————————</p>
+<h6 id="诊断练习-5题"><a href="#诊断练习-5题" class="headerlink" title="诊断练习 5题"></a>诊断练习 5题</h6><ol>
+<li><p>求导公式</p>
+</li>
+<li><p>泰勒展开</p>
+</li>
+<li><p>链式法则</p>
+</li>
+<li><p>substitution</p>
+</li>
+<li><p>integration</p>
+<blockquote>
+<p>淦！被唬住了！反向求导一下就知道了！</p>
+</blockquote>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">Latex格式参考1</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers/supplement/HUA8n/how-to-write-math-in-the-discussions-using-mathjax">Latex格式参考2</a></p>
+</blockquote>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  Intro to Week one | 关于向量章节的介绍</p>
+<blockquote>
+<p>1 Video: 1min</p>
+<p>Sum: 1 min</p>
+</blockquote>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  Vectors ｜ Vectors，Cartesian Coordinates，dot product，cross product</p>
+<blockquote>
+<p>4 +2 Video: 37min + 17 min</p>
+<p>9 Reading: 75min</p>
+<p>1 Quiz: 15min</p>
+<p>Sum: 144 min</p>
+</blockquote>
+<p>————3月10日，预测170min，实际174min————-</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Analytic Geometry ｜</p>
+<blockquote>
+<p>2 Video: 22min</p>
+<p>2 Reading: 15 min</p>
+<p>1 Quiz: 15min</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Vecotr Algebra ｜ </p>
+<blockquote>
+<p>4 Video: 43 min</p>
+<p>11 Reading: 70 min</p>
+<p>1 Quize: 15ming </p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Fields ｜ </p>
+<blockquote>
+<p>1 Video: 8min</p>
+<p>1 Reading: 5 min</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Quiz | []/10</p>
+</li>
+</ul>
+<p>问题@2022.3.10：</p>
+<ol>
+<li><p>这门课的风格适合我吗？ ✅</p>
+<blockquote>
+<p>适合，coursera的设计好像也很懂学习心理学，UI好看舒服</p>
+<p>没有中文字幕，只有英文字幕 语速较慢 能听懂</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 了解中文翻译组，好的加入了，就是好像翻译内容没有更新？</li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://translate-coursera.org/new_gtc/app/#/app/course_detail/PMjPbaIqEemvjBKUOppBiA">课程翻译链接</a></li>
+</ul>
+</blockquote>
+</li>
+<li><p>我似乎已经了解向量和矩阵了，我还可以学到什么新东西？✒️</p>
+<blockquote>
+<p>rethinking，对点积和叉乘的理解加深了一点，从投影的角度看待，从几何的角度。加深了position vector 和 displacement vector 的概念。</p>
+</blockquote>
+</li>
+<li><p>我设定的学习计划合理吗？⭕️</p>
+<blockquote>
+<p>内部课程安排似乎不太均匀，再观察一下</p>
+</blockquote>
+</li>
+</ol>
+<p>问题@2022.3.</p>
+<ol>
+<li>Lavi-civita 和 kronecker-delta 是啥玩意</li>
+<li>可以看一小节的一半中止作为一次学习吗</li>
+</ol>
+<h4 id="更新笔记"><a href="#更新笔记" class="headerlink" title="更新笔记"></a>更新笔记</h4><a href="/2022/03/10/%E5%85%B3%E4%BA%8E%E5%90%91%E9%87%8F%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/" title="向量章节笔记更新中">向量章节笔记更新中</a>
+
+<p>—–待整理⬇️——-</p>
+<p><strong>向量</strong></p>
+<p>交换律 communication</p>
+<p>结合律 association</p>
+<p>线性 scalar multiply</p>
+<p>分配律 distribution</p>
+<p>标量scalar是一个数number，标量有长度和方向，但没有位置</p>
+<p>为了可以用数字or公式表示向量，需要坐标系+单位向量，笛卡尔的名字是谁翻译的！</p>
+<p>几个重要向量</p>
+<p>单位向量 uint vector i, j, k 来自四元数</p>
+<p>位置向量 position vector，尾巴在原点，头在点的位置，指向点的向量，长度由向量的绝对值表示</p>
+<p>位移向量 displacement vector 两个向量的差</p>
+<p>Pythagorean theorem 毕达哥拉斯定理，勾股定理</p>
+<p>dot product ， 也叫scalar product「虽然是向量之间的乘」，点积的结果是一个标量，一个长度，物理意义是一个向量投影到另一个向量上的长度</p>
+<p>corss product， 也叫 vector product，因为结果是个向量</p>
+<p>AxB = - BxA 交换行，行列式符号改变</p>
+<p>代数定义</p>
+<p>几何定义</p>
+<h5 id="Analytic-Geometry"><a href="#Analytic-Geometry" class="headerlink" title="Analytic Geometry"></a>Analytic Geometry</h5><p>用向量来表示线和平面</p>
+<p>线是一个向量，由初始的位置向量和一个与时间有关的位移向量相加而成，包含时间t时的表达式为parametric，把t消掉是non-parametric</p>
+<p>normal vector 为什么把垂直向量叫这个</p>
+<p>cyclincal</p>
+<p>einstein summation convention 省去求和符号</p>
+<h5 id="Vector-Algebra"><a href="#Vector-Algebra" class="headerlink" title="Vector Algebra"></a>Vector Algebra</h5>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/10/%E5%85%B3%E4%BA%8E%E5%90%91%E9%87%8F%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">关于向量的二三事</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/09/RoadMap%E4%B9%8B%E6%88%90%E4%B8%BARobotics%E7%B2%BE%E9%80%9A%E8%80%85/">
+                        <span class="hidden-mobile">RoadMap之Robotics</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"00c73fa82dce8163e3da","clientSecret":"d7efdca1ba4ea1aa275608a9f23b02a249415eb0","repo":"mushroomchan.github.io","owner":"mushroomchan","admin":["mushroomchan"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '4ab3f59bee564d4745bd2159c53cc5b6'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c88d93a98ba2e164b72952026234ced7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,1240 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Dongdong Chen">
+  <meta name="keywords" content="还没想好">
+  
+    <meta name="description" content="学习Robotics的RoadMap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RoadMap之Robotics">
+<meta property="og:url" content="http://example.com/2022/03/09/RoadMap%E4%B9%8B%E6%88%90%E4%B8%BARobotics%E7%B2%BE%E9%80%9A%E8%80%85/index.html">
+<meta property="og:site_name" content="🍄蘑菇的碎碎念基地">
+<meta property="og:description" content="学习Robotics的RoadMap">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-09T08:21:34.000Z">
+<meta property="article:modified_time" content="2022-03-11T11:32:46.587Z">
+<meta property="article:author" content="Dongdong Chen">
+<meta property="article:tag" content="RoadMap">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>RoadMap之Robotics - 🍄蘑菇的碎碎念基地</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c88d93a98ba2e164b72952026234ced7","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>🍄蘑菇的碎碎念基地</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="RoadMap之Robotics">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Dongdong Chen
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-09 16:21" pubdate>
+        2022年3月9日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      14k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      120 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">RoadMap之Robotics</h1>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本版本为初始化版本，结合本人情况并参考以下<a href="###%E5%8F%82%E8%80%83%E5%86%85%E5%AE%B9">内容</a>进行整理。根据学习进程推进将不断进行更新调整。</p>
+<h3 id="更新记录"><a href="#更新记录" class="headerlink" title="更新记录"></a>更新记录</h3><h3 id="参考内容"><a href="#参考内容" class="headerlink" title="参考内容"></a>参考内容</h3><h5 id="个人给出的学习计划"><a href="#个人给出的学习计划" class="headerlink" title="个人给出的学习计划"></a>个人给出的学习计划</h5><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/22266788">机器人工程师学习计划</a></p>
+<blockquote>
+<p>硕哥写于18年，比较诚恳真切，但学习路径有些许陡峭并前紧后松，可能比较适合当时当地的本科生，但我觉得不是十分科学的安排。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://allshire.org/getting-started-robotics/">Getting started in Robotics</a></p>
+<blockquote>
+<p>发于2021的博客，给出总览，但细节不多</p>
+</blockquote>
+<h5 id="学校的培养计划"><a href="#学校的培养计划" class="headerlink" title="学校的培养计划"></a>学校的培养计划</h5><p><a target="_blank" rel="noopener" href="https://www.mihaileric.com/posts/complete-artificial-intelligence-undergraduate-course-plan/">斯坦福4年AI课程计划</a></p>
+<blockquote>
+<p>缺少了EE部分内容，仅参考适用部分</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="http://catalog.mit.edu/degree-charts/electrical-engineering-computer-science-course-6-2/">MIT EECS BA degree charts 6-2</a></p>
+<blockquote>
+<p>MIT EECS 本科学位的培养方案，根据方案筛选了贴切 Robotics需求以及我本人感兴趣的部分见[MIT EECS课程](####MIT EECS课程)</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.eecs.mit.edu/academics/undergraduate-programs/curriculum/6-2-electrical-engineering-and-computer-science/">MIT EECS BA roadmap 6-2</a> </p>
+<blockquote>
+<p>MIT官方针对EECS学生设计的RoadMap的PDF版本</p>
+</blockquote>
+<h5 id="课程学习心得"><a href="#课程学习心得" class="headerlink" title="课程学习心得"></a>课程学习心得</h5><p><a target="_blank" rel="noopener" href="https://lieuzhenghong.com/moocs/">CS自学记录@LieuZhengHong</a></p>
+<blockquote>
+<p>互联网冲浪遇到的网课学习经验分享</p>
+</blockquote>
+<h2 id="四大核心领域"><a href="#四大核心领域" class="headerlink" title="四大核心领域"></a>四大核心领域</h2><p>机器人学的四个核心领域</p>
+<ul>
+<li>感知：视觉传感器，图像传感器，触觉和力传感器，惯导等</li>
+<li>认知：人工智能，知识表达，规划，任务调度，机器学习等</li>
+<li>行为：运动学，动力学，控制，manipulation &amp; locomotion 等</li>
+<li>数学基础：最优估计，微分几何，计算几何，运筹学</li>
+</ul>
+<p>🚩 上述分类为硕哥给出的版本，时隔四年我觉得这个分类不是很贴切，待更新我认为的版本。</p>
+<h2 id="RoadMap-V0-1"><a href="#RoadMap-V0-1" class="headerlink" title="RoadMap V0.1"></a>RoadMap V0.1</h2><h3 id="必修"><a href="#必修" class="headerlink" title="必修"></a>必修</h3><ol>
+<li>微积分 <a href="/2022/03/10/RoadMap%E4%B9%8B%E6%97%A0%E7%97%9B%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E4%B9%A0/" title="我的学习记录">我的学习记录</a></li>
+<li></li>
+</ol>
+<h3 id="等待"><a href="#等待" class="headerlink" title="等待"></a>等待</h3><h4 id="第一年"><a href="#第一年" class="headerlink" title="第一年"></a>第一年</h4><blockquote>
+<p>让我们时间倒回2015年～2016年，那一年我真实上课的内容是：</p>
+<ul>
+<li>线性代数与空间解析几何 ✔️</li>
+<li>微积分 ✔️</li>
+<li>电路分析 ✔️</li>
+<li>大学物理 ✖️</li>
+<li>C语言 ✔️</li>
+<li>ACM算法与程序设计 ⭕️</li>
+</ul>
+</blockquote>
+<ul>
+<li><p><input checked="" disabled="" type="checkbox">  微积分 </p>
+</li>
+<li><p><input disabled="" type="checkbox">  线性代数<a href="/2022/03/10/RoadMap%E4%B9%8B%E6%97%A0%E7%97%9B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%AD%A6%E4%B9%A0/" title="我的学习记录">我的学习记录</a> 「<strong>优秀的工程师和科学家在职业生涯中要学至少五次线性代数</strong>」</p>
+</li>
+<li><p><input disabled="" type="checkbox">  电路</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-002-circuits-and-electronics-spring-2007/index.htm">MIT 6.002 Circuits and electronics</a></p>
+<ul>
+<li>第一门电路课，有模电有数电</li>
+</ul>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  编程</p>
+<blockquote>
+<p>关于编程我的想法是106B和6.0001或者6.00一起先学，接着106L，107，107E</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><p><input disabled="" type="checkbox">  C++</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106b/">Stanford CS106B</a></p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106b/schedule.html">日程表</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1CV411z798?from=search&seid=14587466304005615292&spm_id_from=333.337.0.0">B站视频链接</a></li>
+<li>C++入门友好，涉及一些数据结构算法内容</li>
+</ul>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106l/index.html#calendar">Stanford CS106L</a></p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106l/index.html#calendar">日程表</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yJ411m7CE?from=search&seid=4804255471253472034&spm_id_from=333.337.0.0">B站视频链接</a></li>
+<li>C++语言特性本身</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  C 「用C的一维数组和指针来实现矩阵的加法、乘法、求逆等操作」「有点计算机系统的味」</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/archive/cs/cs107/cs107.1224/">Stanford CS107</a></p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/archive/cs/cs107/cs107.1224/calendar">日程表</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ua4y1a72K?from=search&seid=2500009805400834486&spm_id_from=333.337.0.0">B站视频</a></li>
+<li>使用内存和指针编写C程序，C程序地址空间和编译/运行时行为的准确模型，Unix开发环境，识别运行瓶颈！【这是我想要的课！】</li>
+</ul>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://cs107e.github.io/">Stanford CS107E</a></p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cs107e.github.io/schedule/">日程表</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCVxh8KKa_sdzRnHxF9POcJA/search?query=cs107e">油管视频</a> 【没找到完整的，只有片段】</li>
+<li>结合树莓派的C编程！啊爱了！</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Python</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/index.htm">MIT 6.0001 Introduction to Computer Science Programming in Python</a></p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/">MIT 6.00 Introduction to Computer Science</a></p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/">MIT 6.00SC</a></p>
+<p><a href="https://link.zhihu.com/?target=http://open.163.com/special/opencourse/bianchengdaolun.html">MIT 6.00 中文版</a></p>
+<p>【在6.0001+6.0002和6.00选择一下】</p>
+<p>Anacoda，Numpy</p>
+<p>「通过Numpy帮助自己解决线性代数问题」</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Matlab&amp;Simulink 「与控制理论搭配使用」</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ctms.engin.umich.edu/CTMS/index.php?aux=Home">自动控制系统的Simulink互动网站</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.mathworks.com/help/control/ug/control-of-an-inverted-pendulum-on-a-cart.html;jsessionid=75de5d16cc8a0140e91adf0cb99a">倒立摆的实现</a></p>
+<p>倒立摆是机器人学中一个非常重要的模型，因为火箭、导弹、双足机器人、四足机器人，基本都是倒立摆的变形。你自己实现出来的simulink模型一定要存好，以后可能还会再拿出来仔细看。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  HTML+Javascripts </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.w3schools.com/">一个互动网站</a></p>
+<blockquote>
+<p>把网站左侧的“Learn HTML”、“Learn CSS”、“Learn Javascript”和“Learn JQuery”学完就行，别的部分还有很多花哨的技术，没有必要去学了。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://threejs.org/examples/#webgl_animation_keyframes">观摩javascripts培养兴趣</a></p>
+<blockquote>
+<p>学习原因：</p>
+<ul>
+<li>面向对象思想，DOM</li>
+<li>工具like json，AJAX</li>
+<li>近年来一个流行的趋势是用webkit嵌入程序用HTML和Javascript作为图形界面的后端，而在机器人操作系统ROS里，通过rosbridge可以非常方便地把机器人程序的数据传递到websocket上</li>
+</ul>
+</blockquote>
+<p>如果你按照我之前说的方法探索了一些HTML和Javascript的技术，那么JQuery，bootstrap，AngularJS你已经多多少少知道是怎么回事了。web后端的技术，比如PHP和MySQL，也可以了解一下，LAMP要学会怎么配置。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Java</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.mit.edu/6.031/www/sp21/">MIT 6.031 Elements of Software Construction</a></p>
+<p>了解关键的软件工程理念，包括接口、表示独立性、规格、不变性、抽象数据类型、设计模式和单元测试</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>参考书</p>
+<p><a target="_blank" rel="noopener" href="https://www.stroustrup.com/Tour.html">A tour of C++</a></p>
+<p><a target="_blank" rel="noopener" href="http://songjinshan.com/akabook/zh/index.html">一站式C编程</a> 【这个网站好像停运了？看起来怪怪的】</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  暑假作业</p>
+<blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> 个人主页</li>
+<li><input disabled="" type="checkbox"> 代数与离散数学</li>
+<li><input disabled="" type="checkbox"> 看文章</li>
+<li><input disabled="" type="checkbox"> 数学之美</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h4 id="第二年"><a href="#第二年" class="headerlink" title="第二年"></a>第二年</h4><blockquote>
+<p>时间倒回2016～2017年，那一年我真实上课内容是</p>
+<ul>
+<li>信号与系统 ✔️</li>
+<li>模拟电路基础</li>
+<li>数字逻辑设计及应用</li>
+<li>自动控制原理</li>
+<li>复变函数 ⭕️</li>
+<li>概率论与数理统计  ✔️</li>
+<li>微处理器系统结构与嵌入式系统</li>
+<li>计算机软件基础</li>
+<li>传感器原理及应用</li>
+<li>大学物理2  ✖️</li>
+<li>机械工程基础 ✖️</li>
+</ul>
+</blockquote>
+<ul>
+<li><p><input disabled="" type="checkbox">  概率论与统计</p>
+<blockquote>
+<p>斯坦福CS109  <a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs109/">https://web.stanford.edu/class/cs109/</a></p>
+</blockquote>
+<blockquote>
+<p>MIT 18.05 <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/">https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  离散数学/计算数学基础 </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs103/">Stanford CS103</a> 【先修课程106B】</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/">MIT 6.042</a> 【先修课程 单变量微积分】</p>
+<p>你要基本掌握“群是什么”，能够用代数的眼光去证明&quot;det(AB) = det(A)det(B)&quot;，还要能理解“用一张纸就可以变出克莱因瓶”（当然是在四维空间里）。另外，你这个时候也要能够意识到自己需要再学一遍线性代数。</p>
+<p>MIT 6.042 离散数学</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  微分方程</p>
+<blockquote>
+<p>不确定是不是一定需要，但觉得是需要的</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/">MIT 18.03 Differential Equations</a></p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-03sc-differential-equations-fall-2011/">MIT 18.03SC Differential Equations</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox"> </p>
+</li>
+<li><p><input disabled="" type="checkbox">  信号与系统</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-003-signals-and-systems-fall-2011/index.htm">MIT 6.003 Singals and Systems</a></p>
+<p>三大变换（傅里叶变换，拉普拉斯变换，Z变换）</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  算法设计与分析 <a target="_blank" rel="noopener" href="https://stanford-cs161.github.io/winter2022/">Stanford CS161</a> 【先修课程103】</p>
+<blockquote>
+<p>MIT 6.046 <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  数值计算</p>
+</li>
+<li><p><input disabled="" type="checkbox">  数字电路，嵌入式系统</p>
+<blockquote>
+<p>基本的数字电路知识、数模转换</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  机器学习</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://cs229.stanford.edu/logistics_faq.html">Standford CS229 Machine Learning</a></p>
+<ul>
+<li>先修课程：CS109，CS106，多元微积分与线代</li>
+</ul>
+<p>西瓜书</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  计算系统结构</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-004-computation-structures-spring-2017/index.htm">MIT 6.004 Computation Structure</a></p>
+<ul>
+<li>本课程介绍数字系统的架构，强调广泛技术共有的结构原则。它涵盖了多级实施策略、新原语（如门、指令、程序、流程）的定义以及使用较低级别元素的机械化等主题。它还包括分析潜在的并发性、优先级限制和性能措施、管道和多维系统、指令集设计问题以及对当代软件结构的架构支持。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  单片机</p>
+<blockquote>
+<p>俗话说，没有什么嵌入式系统是一块STM32实现不了的，如果有，就用两块。STM32是ARM Cortex‑M家族中最为广泛应用的一款单片机，在网上也有很多的教材和开发板可供选择。在国内著名的电子论坛<a href="https://link.zhihu.com/?target=http://www.amobbs.com/forum-3020-1.html">STM32/8 分论坛帖子清单 (amoBBS 阿莫电子论坛)</a>上，有很多参考资料，有问题也可以在这里和大家讨论学习。</p>
+<p>51单片机、AVR单片机、STM32单片机原理，UART、SPI、I2C、CAN等协议的原理和数据收发，STM32开发板的使用，微电子焊接</p>
+<p>单片机开发，电机驱动的开发，码盘和超声波等传感器的读取，底盘运动学的计算，PID调试，任务调度逻辑的调试，舵机控制</p>
+<p>在STM32上，有freeRTOS，uCOS，Vxworks这么几种实时操作系统；Linux是一种非实时操作系统，但是可以通过打补丁变成实时操作系统。这些操作系统的细节在机器人开发中都会多多少少被涉及到，同学们可以随时上Google和CSDN去查大神们的介绍。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  自动控制原理，传感器</p>
+<blockquote>
+<p>电机转动和驱动的原理，PID的原理，调试四轮机器人底盘的移动，基本的传感器如陀螺仪、码盘、红外线、超声波的原理和读取方式，</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  计算机网络</p>
+<blockquote>
+<p>网络知识如配置IP配置路由器等。</p>
+<p>连接路由器、配置网络，网络配置就是连连路由器插插网线，但是Linux系统下配置网络有时会非常麻烦，一定要多积累这方面的知识，因为将来你造的机器人多半会顶着一个无线路由器跑来跑去，甚至有的机器人上各个模块自己就能组起一个小局域网。这些技能的熟练掌握需要你花很多时间去做真正能用的机器人来练手。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Altium Designer做图、制板、焊板。</p>
+<blockquote>
+<p>从现在开始，就给自己积累一个工作记录，可以就是简单的txt文件，记录你做过所有板子的bug、解决方案、学到的原理图、PCB layout的注意事项等等</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  复变函数</p>
+</li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> 暑假作业</li>
+</ul>
+<blockquote>
+<p>如果大二的暑假没有参加机器人比赛，可以做一个舵机机器人，比如6条腿的蜘蛛，比如码垛机器人。舵机是机器人工程师的好朋友，一定要好好掌握。</p>
+<p>把自己的一些课程设计和小项目放在了Github上面</p>
+<p>在面向对象的程序课里面，一定要积累3000行左右的代码的开发经验。经典的面向对象程序设计的练习通常是写游戏，比如俄罗斯方块，吃豆人等等，一定要自己能够做到完全手写一个完整的项目出来。</p>
+</blockquote>
+<hr>
+<h4 id="第三年"><a href="#第三年" class="headerlink" title="第三年"></a>第三年</h4><ul>
+<li><p><input disabled="" type="checkbox">  凸优化</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/ee364a/">Stanford CS364a Convec Optimization @Boyd</a></p>
+<p>Boyd 的配套的教科书</p>
+</blockquote>
+<ul>
+<li><input disabled="" type="checkbox"> 手写gradient descend，barrier method</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox">  算法导论</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-spring-2020/index.htm">MIT 6.006 Introduction to algorithm</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  概率图模型</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://cs.stanford.edu/~ermon/cs228/index.html">Stanford CS 228 Probabilistic Graphical Model</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  人工智能概论 </p>
+<blockquote>
+<p>这门课包括了人工智能领域所运用的研究，比如搜索，游戏，逻辑以及图像还有机器学习算法的应用。提纲挈领，比想象中有趣</p>
+<p><a target="_blank" rel="noopener" href="https://stanford-cs221.github.io/spring2020/">Stanford CS221 <strong>Artificial Intelligence: Principles and Techniques</strong></a></p>
+</blockquote>
+<blockquote>
+<p>MIT 6.033 2010年的AI 会不会太古老了 <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-033-computer-system-engineering-spring-2018/syllabus/">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-033-computer-system-engineering-spring-2018/syllabus/</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  软件工程</p>
+<blockquote>
+<p>大三的时候学校应该会开设软件工程的课程。不管你是不是这个专业，上不上这门课，都应该主动去听一听，甚至跟着课程的设计作业一起做一做。软件工程我觉得是机器人工程师必须具备的意识，因为一个机器人系统里涉及大量的硬件系统和软件功能，软件的部分往往还会涉及不同的语言、不同的编译环境、不同的开发工具链。几个人合作的话，大家的专业背景、编程习惯都不相同，这就导致不同的代码和模块之间的协议沟通非常复杂，必须尽早用UML和其他软件工程的工具帮助团队理解和互相沟通。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  编译器</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs143/">Stanford CS143 Compilers</a></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs143/syllabus.html">日程表</a></p>
+</blockquote>
+<p>主要是讲编译器背后的设计和理论，你学了之后，至少应该了解一个编译器是如何构建的，还有编译器的模块化组件，也需要了解。如果你对语义识别感兴趣，可以好好琢磨一下编译器的设计和传统的自然语言处理堆栈之间的相似之处，非常有趣。</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-035-computer-language-engineering-spring-2010/index.htm">MIT 6.035 Computer Language Engineering</a></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-035-computer-language-engineering-spring-2010/syllabus/">日程表</a></p>
+</blockquote>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  数据库</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://cs145-fa19.github.io/">Stanford CS145 Data Management &amp; Data System</a></p>
+<p>主要讲数据库管理系统背后的原则，比如关系数据模型、索引、模式等主题，但凡你想成为数据专家或者机器学习工程师，就必须要懂得数据库的原理。【先修课程CS103，CS107】</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  并行计算</p>
+<blockquote>
+<p>并行计算这门课会讲Apache Spark到GPU这些系统背后的原理</p>
+<p><a target="_blank" rel="noopener" href="https://gfxcourses.stanford.edu/cs149/fall19/lectures">Stanford CS149 Parallel Computing</a></p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/mathematics/18-337j-parallel-computing-fall-2011/">MIT 6.338 Parallel Computing</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  数据挖掘</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs246/">Stanford CS246 Data Mining</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  CNN</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://cs231n.stanford.edu/">Stanford CS231n Convolutional Neural Networks for Visual Recognition@Li Fei-fei</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  OpenCV</p>
+</li>
+<li><p><input disabled="" type="checkbox">  机器人</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://courses.csail.mit.edu/6.141/spring2014/pub/syllabus.html">MIT 6.141 Robotics: Science and Systems</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  搞一个自己的四旋翼</p>
+<blockquote>
+<p>四旋翼飞行器的机械部分最简单，但是算法比较复杂。对于大三学生来说，从零开始一步到位写一个稳定的飞控比较困难，因为飞控里面有很多细小的知识点要注意。目前我没有发现什么比较好的书籍推荐，已有的一些关于四旋翼系统的书要么太浅（上来就教你焊电路），要么太深（上来就教你state estimation），听说 <a target="_blank" rel="noopener" href="https://www.zhihu.com/people/liu-top">@Liu Top</a>的exbot小组在写一个教材，我是非常期待的。学习四旋翼飞行器有下面几个步骤：</p>
+<p>第一步：自己调一个小四轴飞起来</p>
+<p>现在开源社区的人言必pixhawk，其实我觉得从学习的角度来说，pixhawk太贵，而且不适合学习，我比较推荐的是 <a href="https://link.zhihu.com/?target=https://chiplab7.taobao.com/">首页-第七实验室</a> 这家淘宝店卖的STM32F405飞控，买回来以后自己再随便买个机架（比如大疆F450）、接收机和遥控，就能按照飞控板附带的学习资料、调试软件飞起来。</p>
+<p>第二步：看硬件图、读代码</p>
+<p>chiplab7的飞控板附带一大堆学习资料，对加速度计、陀螺和磁感计都有很仔细的解释，硬件链路图也很详细。chiplab7淘宝掌柜的又很认真负责，我学用的时候，发现代码有bug和看不懂的地方，都可以直接找掌柜问。</p>
+<p>看完代码以后，对一个飞控系统的基本模块：姿态解算、控制解算、混控输出、遥控器处理、嵌入式处理就很明白了。然而这里面有很多技术是需要另外学习的。除了基本的嵌入式编程以外，还有要把大二大三学的信号处理方面的知识再捡起来看看。因为飞行器在空中有振动，会让加速度计产生噪声，为了把这些噪声去除掉，需要对加速度计给出的信号做低通滤波处理，如何选择滤波器的参数呢？如果滤波滤得太狠，延迟就会比较大，对控制的表现会有影响；如果滤波滤得不够，可能会有一些低频的噪声偶尔会出现，导致加速度计的观测不能用。另外最重要的是要理解姿态解算和控制解算这两块知识。chiplab7的飞控板的代码采用的是最简单的互补滤波算法做为姿态解算模块，然后控制解算是对欧拉角的三个角度做闭环PID控制，基本都是基础的基础了。</p>
+<p>第三步：小修小改加深理解</p>
+<p>chiplab7的飞控是靠气压计定高的，飞行效果非常奔放。这时候可以淘宝买个20块钱的超声波模块，然后自己写个高度环去稳定飞控的定高表现。</p>
+<p>我觉得这个过程至关重要，因为高度控制相对来说是个比较直观理解PID控制的方式，而且chiplab7的飞控加高度控制非常好加。工作量不大，因为改善效果很显著，所以可以让人很有成就感，加深继续学习的乐趣。</p>
+<p>第四步：理解核心的数学和控制知识</p>
+<p>这一部分大三是肯定来不及学的，但是我还是在这里列出来，因为这些知识你之后都需要慢慢学，我也会在之后不断重复提到这些知识点。</p>
+<p>姿态解算和控制解算涉及的知识有：</p>
+<p>\1. 刚体姿态的表示、运动学方程和动力学方程。主要是对牛顿-欧拉方程的认识和理解、刚体姿态的欧拉角表示法、姿态与角速度的关系等等。</p>
+<p>这部分说复杂不复杂，说简单也不简单，我同样是没有找到一本完整的书全都介绍过的，是学了好几个不同的书和论文以后搞明白的。现在看起来是从维基百科入手比较靠谱。</p>
+<p>\2. 自动控制原理。讲PID的书和文章就多了去了，没有太多复杂的书。</p>
+<p>\3. 线性估计基本原理。其实就是互补滤波：<a href="https://link.zhihu.com/?target=http://www.pieter-jan.com/node/11">Reading a IMU Without Kalman: The Complementary Filter</a> 。拿这个关键词百度各种搜就会了。</p>
+<p>第五步：重头开始造轮子</p>
+<p>知乎著名网友vczh曾经说过，学习要抱着勇于造轮子的心态才能进步。所以在熟悉了别人飞控基础上，可以自己重头造一个飞控的轮子。可以自己从芯片开始重新画一个飞控板，读读STM32的芯片手册、读读各种传感器的芯片手册，自己手画一个飞控的原理图、做PCB layout、制板自己焊元件，全套花不了1000块钱，能够加深很多对硬件的理解。这一部分如果大三没空，也可以不搞了。</p>
+</blockquote>
+<blockquote>
+<p>制造整个机器人的过程中要特别重视文档的积累。在你大三末期，你可能随着学校的机器人队备战比赛，你可能主力负责一台机器人。你应该自己列一个excel表格，把机器人用了几颗螺丝，几根导线，每个零件的规格是什么，都列出来。这个表格一方面可以用来帮助团队管理机器人的物料，一方面也是你自己的经验技术积累，将来你做的其他机器人可能多多少少都是Robocon、RoboMasters机器人的变形。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  积累自己的buglist</p>
+<blockquote>
+<p>另一个积累是建一个自己的buglist，buglist包括什么呢，可以像冷大这样：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/46824735/answer/115202408?from=profile_answer_card">做控制、机器人等算法工程师是怎样一种体验？ - 冷哲的回答</a>，就简单把一些自己的发生过的问题和最后的解决办法罗列下来。比如说“杜邦线接插位不稳固容易脱开，接好后应该用电工胶布再裹一圈”，“外发给淘宝加工的机械图纸，要特别注意和加工商沟通有没有漏掉一些细节，如沉头螺丝孔，关键的倒角”等等。你也可以帮其他机器人的问题也做这样的记录。buglist可以就是一个简单的文本文件，如果你一直往里面积累自己工作中的记录，等你将来工作了，这个文件可能会值很多钱。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  操作系统原理，嵌入式系统原理</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://web.stanford.edu/~ouster/cgi-bin/cs140-spring20/lectures.php">Stanford CS140 Operating Systems</a></p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://web.stanford.edu/~ouster/cgi-bin/cs140-spring20/lectures.php">日程表</a></li>
+<li>没有视频，要不看看MIT的</li>
+</ul>
+</blockquote>
+<p>操作系统，你如果想要擅长系统编程，就一定要上这门课，这门课是讲如何从头开始搭建一个操作系统，不仅需要设计系统，还需要明白如何调试和代码管理。如果你不明白，你手下的人敲完：sudo rm -rf /*就撤了，你该如何拯救你的代码？</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="第四年"><a href="#第四年" class="headerlink" title="第四年"></a>第四年</h4><ul>
+<li><p><input disabled="" type="checkbox">  关于选学校</p>
+<blockquote>
+<p>CMU：世界第一的机器人研究院卡耐基梅隆大学，</p>
+<p>MIT：麻省理工学院的CSAIL实验室。</p>
+<p>UCB：</p>
+<p>北美传统计算机四大名校（麻省理工学院，卡耐基梅隆大学，斯坦福大学，加州大学伯克利分校）里，除了斯坦福大学热火朝天在搞人工智能以外，其他几个学校的机器人研究都很不错。</p>
+<p>如果想接触到最好的机器人资源，你要选择有钱的实验室，而不是有名的实验室。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  数学in deep</p>
+<blockquote>
+<ul>
+<li>抽象代数</li>
+<li>拓扑教材（有一本很神奇的书叫做Topopogy Without Tears <a href="https://link.zhihu.com/?target=http://www.topologywithouttears.net/">http://www.topologywithouttears.net/</a>），这样才理解了为什么数学分析要用奇怪的符号去解释一些看起来很浅显的道理。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  读书 </p>
+<blockquote>
+<p>大四可以开始读一些著名入门书籍，我把这些书不分先后地列出来，你没有必要全部去读，而且每本书先读前几章就够了，能读多少尽量读多少。</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.amazon.com/Linear-System-Electrical-Computer-Engineering/dp/0199959579">线性系统理论</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.robots.ox.ac.uk/~vgg/hzbook/">Multiple View Geometry in Computer</a> 🌟</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.amazon.com/Linear-Estimation-Thomas-Kailath/dp/0130224642">线性估计</a> 🌟</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.eecis.udel.edu/~cer/arv/readings/old_mkss.pdf">An Invitation to 3-D Vision</a> 🌟</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.amazon.com/Modern-Control-Systems-12th-Richard/dp/0136024580">Modertn Control Systems</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://authors.library.caltech.edu/25023/1/Housner-HudsonDyn80.pdf">Rigid Body Dynamics</a></p>
+<blockquote>
+<p>说实话刚体动力学理论我没有找到特别好的书。但是刚体动力学理论很重要。</p>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.cds.caltech.edu/~murray/amwiki/index.php/Main_Page">Feedback Systems: An Introduction for Scientists and Engineers</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cs.unc.edu/~welch/kalman/media/pdf/maybeck_ch1.pdf">Stochastic models estimation and control</a></p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  毕业设计的选题</p>
+<blockquote>
+<p>关于毕业设计的选题，我推荐这么几个：</p>
+<ul>
+<li><p>手写双目视觉里程计。涉及到图像处理、特征匹配、位置解算、空间变换等等。</p>
+</li>
+<li><p>手写四旋翼飞行器基于GPS的轨迹规划。涉及到深挖四旋翼飞行器的运动原理、IMU原理、轨迹生成和优化等。</p>
+</li>
+<li><p>造一个被推了也不会倒的双足舵机机器人。涉及到舵机控制、倒立摆建模、动力学分析、PID控制、IMU原理等。</p>
+</li>
+<li><p>深度学习训练一个小车追人跑。涉及到深度学习工具包使用、数据集采集、数据集分析、小车控制等。</p>
+</li>
+<li><p>机械臂给人端茶倒水。这个相对来说土豪一点，因为能直接拿来用的机械臂都很贵，这个要看实验室有没有条件了。涉及到多自由度机械臂原理的学习、工具包的使用、轨迹规划等等。</p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="第五年"><a href="#第五年" class="headerlink" title="第五年"></a>第五年</h4><ul>
+<li><p><input disabled="" type="checkbox">  机器人视觉定位算法</p>
+<blockquote>
+<p>如果研究机器人视觉定位，几种常用的定位算法：PTAM（<a href="https://link.zhihu.com/?target=http://www.robots.ox.ac.uk/~gk/PTAM/">Parallel Tracking and Mapping for Small AR Workspaces (PTAM)</a>），ROS的标配VO（<a href="https://link.zhihu.com/?target=http://wiki.ros.org/viso2_ros">viso2_ros - ROS Wiki</a>），SVO（<a href="https://link.zhihu.com/?target=https://github.com/uzh-rpg/rpg_svo">GitHub - uzh-rpg/rpg_svo: Semi-direct Visual Odometry</a>），LSD-SLAM（<a href="https://link.zhihu.com/?target=http://vision.in.tum.de/research/vslam/lsdslam">http://vision.in.tum.de/research/vslam/lsdslam</a>）ORB-SLAM（<a href="https://link.zhihu.com/?target=https://github.com/raulmur/ORB_SLAM2">GitHub - raulmur/ORB_SLAM2: Real-Time SLAM for Monocular, Stereo and RGB-D Cameras, with Loop Detection and Relocalization Capabilities</a>），都必须自己学习之后全部跑一遍。</p>
+<p>由于SLAM这两年很火，研究的人很多，所以网上可以参考的资料也很多，比如<a href="https://link.zhihu.com/?target=https://github.com/hcdth011/ROS-Hydro-SLAM">https://github.com/hcdth011/ROS-Hydro-SLAM</a>，就在ROS上实现了几种定位算法的对比。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  知识结合应用</p>
+<blockquote>
+<ul>
+<li>旋转表示法（欧拉角、四元数、旋转矩阵）</li>
+<li>数值计算怎么防止矩阵出现数值问题</li>
+<li>把凸优化、卡尔曼滤波还有多自由度机械臂的控制学习一下。这三个领域的知识，是任何一种机器人都会用的到比较难的知识。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  多自由度的机械臂的控制</p>
+<blockquote>
+<p>难点在于机械臂的运动学正反解、运动学控制和动力学控制，基本是一个建模分析和数值算法实现的问题。如果你所在的学校没有一个财力雄厚的机器人实验室的话，你基本上没有机会接触到多自由度的机械臂。这时候之前学到的Simulink和就要学的Gazebo就派上用场了，你可以用Simscape里面的刚体搭一个多自由度机械臂，然后通过Simulink仿真去学习机械臂的控制；也可以用Gazebo的URDF语言写一个机械臂，然后通过Gazebo和ROS的接口去控制机械臂；也可以用ROS里面的著名工具包<a href="https://link.zhihu.com/?target=http://moveit.ros.org/">MoveIt! Motion Planning Framework</a>，不过MoveIt的问题是，他只能仿真运动学，而不能仿真动力学。工业领域对多自由度的机械臂控制通常用一个叫做D-H表示法的建模工具（<a href="https://link.zhihu.com/?target=https://en.wikipedia.org/wiki/Denavit%E2%80%93Hartenberg_parameters">Denavit</a>），这个东西我并不太会。我只会向同学们推荐我导师的著作<a target="_blank" rel="noopener" href="http://www.cds.caltech.edu/~murray/books/MLS/pdf/mls94-complete.pdf">A mathematical introduction to robotic manipulation</a></p>
+</blockquote>
+<p>有一个非常神奇的事实：《A mathematical introduction to robotic manipulation》这本机械臂控制领域的著名教材的第二章和计算机视觉领域的著名教材《An Invitation to 3-D Vision》的第二章基本是一样的，都在讲旋转表示法。这是因为</p>
+<p>李群和李代数是刚体旋转表示背后的数学理论，如果想要深挖一些，</p>
+</li>
+<li><p><input disabled="" type="checkbox">  搭建仿真系统</p>
+<blockquote>
+<p>我觉得做仿真系统的能力直接衡量了机器人工程师的技术水平。当你开始要搭一个仿真系统的时候，第一步是通过欧拉方程和牛顿方程确定刚体的运动特点，甚至要自己写刚体二阶微分方程；第二步是确定刚体之间的互联关系，设计不同类型的关节，如果有软性连接需要加入弹簧阻尼模型；第三步是确定被仿真的刚体系统会不会和外界产生碰撞或者其他形式的力，如果有的话，需要设计合适的接触力和摩擦力仿真的模型。多旋翼飞行器的仿真是很简单的，不需要考虑什么接触力。但是多自由度机械臂基本都需要仿真接触力，不和物理世界去交互的机械臂只有很小的实用意义。而能够自行运动locomotion系统，比如双足、多足机器人，则涉及到更多的接触力，多到接触力都会影响仿真系统的数值稳定性。搭建一个仿真系统需要很强的系统建模能力和数值分析的能力，虽然Simulink、Gazebo、Vrep提供了不同程度的工具简化你的工作，但是要让仿真系统能够稳定运行，必须要能深入其中的细节。有些看起来很高大上的仿真工具，比如Nvida的PhysX，在仿真的时候是忽略掉科里奥利力的，如果不理解仿真的本质，可能就会忽略这一个重要的缺陷。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="第六年"><a href="#第六年" class="headerlink" title="第六年"></a>第六年</h4><ul>
+<li><p><input disabled="" type="checkbox">  现在的状态</p>
+<blockquote>
+<ul>
+<li>看到一个机器人，能够很果断地分析出它用了什么传感器、执行器，计算平台大概是什么量级，他的执行机构能够承受多少力量。</li>
+<li>看到一个新的算法，能够大约判断清楚它的执行流程，在什么环节做了优化。</li>
+<li>看到一个新的没学过的知识，能够分析出它和你以前学过的什么知识有联系，你还需要再学什么才能弄明白这个知识点。</li>
+<li>积累了几万行代码的经验</li>
+<li>熟练地谈论谁家的电机回差小，谁家的电机线性程度好。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  FPGA和GPU优化算法</p>
+</li>
+<li><p><input disabled="" type="checkbox">  魔改Linux内核</p>
+</li>
+<li><p><input disabled="" type="checkbox">  玩玩液压系统</p>
+</li>
+<li><p><input disabled="" type="checkbox">  强化学习</p>
+</li>
+<li><p><input disabled="" type="checkbox">  计算机图形学或者计算力学</p>
+</li>
+<li><p><input disabled="" type="checkbox">  对未来的判断</p>
+<blockquote>
+<ul>
+<li>对视觉定位和传感器融合来说，SLAM急需新的突破，目前通过几何约束去实现loop closure看起来已经走入了死路，没法有更多的发展了，下一步可行的方向是与深度学习进行结合。具体的一些介绍可以阅读行业中大牛的一篇文章<a href="https://link.zhihu.com/?target=http://www.computervisionblog.com/2016/01/why-slam-matters-future-of-real-time.html">http://www.computervisionblog.com/2016/01/why-slam-matters-future-of-real-time.html</a>，记述了几个业界大牛们最新的观点。传感器融合技术，目前还有很多问题可以探索，因为传感器的延时、不均匀的信号，会给定位系统造成困扰，如何去除这些干扰，需要建立比较复杂的非线性优化问题，具体可以关注香港科技大学Shaojie Shen的工作。</li>
+<li>对于多自由度机械手和机器人的locomotion来说，这里面还有非常多可以探索的研究问题。我前面提过接触力和摩擦力很难仿真，大神告诉我现在没有任何一种工具和理论能把接触力和摩擦力正确仿真出来，因此如何在机器人系统里妥善处理对这些力的控制，就是很难的问题了。现在业界的一个前沿发展方向，也是利用机器学习技术来帮助机器人学会处理这些外力，不过人类目前最优秀的多自由度机器人系统，Berkeley的Brett机器人，叠几块积木就要用十分钟（<a href="https://link.zhihu.com/?target=http://news.berkeley.edu/2015/05/21/deep-learning-robot-masters-skills-via-trial-and-error/">New ‘deep learning’ technique enables robot mastery of skills via trial and error</a>），显然还有很多提升的空间。这方面的问题同学可以关注知乎大神<a target="_blank" rel="noopener" href="https://www.zhihu.com/people/70bcce80353eccd2938cbfa2ac856aab">@戴泓楷</a><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/0eeca981bb238839881694643181fa91">@周佳骥</a>。</li>
+</ul>
+</blockquote>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://people.eecs.berkeley.edu/~pabbeel/cs287-fa19/">UCB  CS287 Advanced Robotics</a></p>
+<blockquote>
+<ul>
+<li>日程表</li>
+<li><a href="">概率机器人 书</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>油管视频</li>
+<li>有RL，有控制规划，有粒子滤波器啥的，期待</li>
+<li>了解最先进的机器人系统下的数学和算法。这些技术大多主要基于优化和概率推理——这两个领域在现代人工智能中都广泛适用。本课程的一个预期副作用是一般来说加强您在这些领域的专业知识。</li>
+<li>PhD课程</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h4><ul>
+<li><p><input disabled="" type="checkbox">  卡尔曼滤波，学会一至两种证明方法</p>
+</li>
+<li><p><input disabled="" type="checkbox">  李群，旋转表示法</p>
+<blockquote>
+<p>所有的旋转表示法都可以归纳为一种优雅的李群结构：SO(3)群。而计算机视觉和机械臂控制都涉及到理解刚体的旋转，事实上用计算系统去观测和控制所有的刚体构成的系统，理解旋转都是很关键的问题。旋转表示法应该作为研究生阶段的一个重要学习的知识点。</p>
+<p>可以看这篇文章An elementary introduction to groups and representations的前50页（<a href="https://link.zhihu.com/?target=http://www.cmls.polytechnique.fr/perso/renard/Hall_Group.pdf">http://www.cmls.polytechnique.fr/perso/renard/Hall_Group.pdf</a>）。这是我自己读着觉得最好的文章，当然网上也有很多其他的介绍。</p>
+<p>李群李代数推荐state estimation for robotics: a matrix lie group approach，第6,7两章，比较简单而且可以独立出来看。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  makefile，cmake</p>
+<blockquote>
+<p>当你把C学得差不多，开始要学写包含多个头文件的程序时，一定要同时学习makefile的知识。这时候要上网去搜“Makefile详解”（<a href="https://link.zhihu.com/?target=http://tieba.baidu.com/p/591519800">Makefile详解（超级好）_mingw吧</a>）这篇文章看。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Latex与矢量图</p>
+<blockquote>
+<p>作为国际国内第一写作神器，学习资料在网上有很多。Latex的学习和使用同样也是需要不断地熟能生巧，多写多练就熟悉了。写毕业论文有个问题是怎么做出精美的矢量图，我推荐<a href="https://link.zhihu.com/?target=https://inkscape.org/en/">Draw Freely | Inkscape</a>，一个比Illustrator更轻量化、但是有些功能反而更强大的免费软件。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Linux与ROS</p>
+<blockquote>
+<p>而对于机器人工程师来说，从现在到可预见的未来里，C是最好的语言，Linux是最好的操作系统，这都毋庸置疑。甚至对于Linux的发行版该选哪个，我们都是很少有质疑的：Ubuntu（<a href="https://link.zhihu.com/?target=http://www.ubuntu.com/global">The leading OS for PC, tablet, phone and cloud</a>）。原因是机器人操作系统ROS（<a href="https://link.zhihu.com/?target=http://www.ros.org/">ROS.org | Powering the world’s robots</a>）是基于Ubuntu开发的，因此在Ubuntu上运行最稳定。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  ROS从入门到精通需要至少一年以上的时间，你必须不断地用，不断地尝试新的代码和硬件，才能对它熟悉起来。</p>
+<blockquote>
+<p>你可能早就听说了ROS的大名，但是最好不要在大四之前去碰它。因为ROS用了很多操作系统和网络的底层技术。我在知乎回答<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21958225/answer/20255931">高手可以谈谈ROS机器人操作平台开发的一些经验吗？ - YY硕的回答</a>里有简单的介绍。ROS的设计目标是把机器人的控制和传感器处理的软件和它的硬件隔离开，用上ROS以后，你可以方便地用到很多能直接跑的软件代码。但是ROS从入门到精通需要至少一年以上的时间，你必须不断地用，不断地尝试新的代码和硬件，才能对它熟悉起来。</p>
+<p>ROS的可视化工具Rviz里面对于机器人旋转的表示用的是四元数，而在你之前研究四旋翼飞行器时，里面的代码表示旋转用的是欧拉角，做姿态解算用的可能是四元数。这个时候要开始有意识地去学习旋转表示法之间的区别和联系。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  Gazebo</p>
+</li>
+<li><p><input disabled="" type="checkbox">  Vrep</p>
+</li>
+<li><p><input disabled="" type="checkbox">  g2o</p>
+<blockquote>
+<p>g2o能够整合bundle adjustment 和structure-from-motion这两大计算机视觉里的关键问题，可以说是一种很好的计算思想了，非常有必要学习一下g2o。</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  git</p>
+<blockquote>
+<p>因此你的机器人如果有嵌入式Linux系统在里面，一定要尽早顶起来路由器，代码定时提交SVN或者git。</p>
+<p>做过的机器人视频、写过的技术报告和文章（最好是英文的）放在上面github</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><h4 id="现状："><a href="#现状：" class="headerlink" title="现状："></a>现状：</h4><ol>
+<li>参加过机器人大赛，了解机器人的制作工作粗略流程，但许多技术细节内容已经忘记了</li>
+<li>有一定的数学，编程基础，但是熟练度不够</li>
+<li>正在从事擦边的工作，不知道走向正轨的明晰道路</li>
+<li>乐于学计算机相关的底层内容，抗拒电路的底层内容（模电阴影挥之不去）</li>
+</ol>
+<h4 id="目标："><a href="#目标：" class="headerlink" title="目标："></a>目标：</h4><ol>
+<li>达到 Robotics 精通者水平</li>
+<li>念一个相关的博士学位</li>
+<li>在业界获得一定的reputation</li>
+</ol>
+<h4 id="困难："><a href="#困难：" class="headerlink" title="困难："></a>困难：</h4><ul>
+<li>缺少实践硬件：传感器，电机，3D打印机，加工件，……</li>
+<li>编程语言不够熟练</li>
+<li>理论基础不牢固</li>
+</ul>
+<h2 id="一些培养方案"><a href="#一些培养方案" class="headerlink" title="一些培养方案"></a>一些培养方案</h2><h4 id="CMU-Robotics-PhD"><a href="#CMU-Robotics-PhD" class="headerlink" title="CMU Robotics PhD"></a>CMU Robotics PhD</h4><p><a target="_blank" rel="noopener" href="https://www.ri.cmu.edu/wp-content/uploads/2017/01/COSAug2016.pdf">CMU机器人学博士的课程分类</a></p>
+<h4 id="MIT-EECS课程"><a href="#MIT-EECS课程" class="headerlink" title="MIT EECS课程"></a>MIT EECS课程</h4><h5 id="想上但没有的课"><a href="#想上但没有的课" class="headerlink" title="想上但没有的课"></a>想上但没有的课</h5><p>6.01 <a target="_blank" rel="noopener" href="http://student.mit.edu/catalog/search.cgi?search=6.01">Introduction to EECS via Robotics</a> 【好像没有线上课，心碎】</p>
+<blockquote>
+<p>有一个同编号的网课，不是它</p>
+</blockquote>
+<p>6.08 Introduction to EECS via Interconnected Embedded Systems</p>
+<hr>
+<h5 id="基础课-五选三"><a href="#基础课-五选三" class="headerlink" title="基础课*五选三"></a>基础课*五选三</h5><ul>
+<li><p><input checked="" disabled="" type="checkbox">  6.002  Circuits and Electronics</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.003  <del>Signal Processing</del> Signal and System</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.004   Computation Structures</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.006  Introduction to Algorithms</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.009  Fundamentals of Programming </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://py.mit.edu/spring22">https://py.mit.edu/spring22</a></p>
+<p>本课程介绍编程的基本概念。旨在培养将基本方法从编程语言应用于抽象问题的技能。主题包括编程和 Python 基础知识、计算概念、软件工程、算法技术、数据类型和递归。实验组件包括软件设计、施工和设计实施。</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="进阶课-七选三"><a href="#进阶课-七选三" class="headerlink" title="进阶课*七选三"></a>进阶课*七选三</h5><ul>
+<li><p><input disabled="" type="checkbox">  6.011  Signals, Systems and Inference</p>
+<blockquote>
+<p>状态估计，状态过滤，高年级课程，有点像现代控制理论的样子，不是很懂这个课的属性</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  6.012  Nanoelectronics and Computing Systems</p>
+<blockquote>
+<p>好像是进阶版的模电，😨</p>
+</blockquote>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.031  Elements of Software Construction</p>
+</li>
+<li><p><input disabled="" type="checkbox">  6.033  Computer Systems Engineering (CI-M)</p>
+<blockquote>
+<p>高年级课程 </p>
+<p>操作系统+网络+分布式系统+安全</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-033-computer-system-engineering-spring-2018/syllabus/">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-033-computer-system-engineering-spring-2018/syllabus/</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  6.034  Artificial Intelligence</p>
+<blockquote>
+<p>斯坦福有差不多的课，比这个新，观察一下</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  6.045  Computability and Complexity Theory</p>
+<blockquote>
+<p>logic, math and machines</p>
+<p>computational complexity</p>
+<p>randomness, adversaries and the physical world</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/syllabus/">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/syllabus/</a></p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 6.046  Design and Analysis of Algorithms</li>
+</ul>
+<h5 id="应用课-十选二"><a href="#应用课-十选二" class="headerlink" title="应用课*十选二"></a>应用课*十选二</h5><ul>
+<li><p><input disabled="" type="checkbox">  6.026  Biomedical Signal and Image Processing</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.035  Computer Language Engineering</p>
+</li>
+</ul>
+<ul>
+<li><p><input disabled="" type="checkbox">  6.101  introductory Analog Electronics Laboratory</p>
+<blockquote>
+<p>模电实验</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-101-introductory-analog-electronics-laboratory-spring-2007/index.htm">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-101-introductory-analog-electronics-laboratory-spring-2007/index.htm</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  6.111  Digital Systems Laboratory</p>
+<blockquote>
+<p>数电实验Verilog</p>
+</blockquote>
+<blockquote>
+<p>有verilog FPGA</p>
+<p><a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-111-introductory-digital-systems-laboratory-spring-2006/index.htm">https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-111-introductory-digital-systems-laboratory-spring-2006/index.htm</a></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  6.115  Microcomputer Project Laboratory (CI-M)</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  6.141 Robotics: Science and Systems (CI-M)</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://courses.csail.mit.edu/6.141/spring2014/index.html#0">http://courses.csail.mit.edu/6.141/spring2014/index.html#0</a></p>
+<p>是我喜欢的！</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  6.338  Parallel Computing and Scientific Machine Learning</p>
+</li>
+<li><p><input disabled="" type="checkbox">  6.402  Modeling with Machine Learning: from Algorithms to Applications</p>
+</li>
+<li><p><input disabled="" type="checkbox">  6.819 / 6.869 Advances in Computer Vision</p>
+</li>
+</ul>
+<h5 id="图了热闹课"><a href="#图了热闹课" class="headerlink" title="图了热闹课"></a>图了热闹课</h5><ul>
+<li><input disabled="" type="checkbox"> 6.073 Creating Video Games</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Robotics/">Robotics</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/RoadMap/">RoadMap</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/10/RoadMap%E4%B9%8B%E6%97%A0%E7%97%9B%E5%BE%AE%E7%A7%AF%E5%88%86%E5%AD%A6%E4%B9%A0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">RoadMap之无痛微积分学习</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/08/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E4%B9%8B%E6%89%93%E9%80%A0%E8%B6%85%E4%BA%BA%E5%AD%A6%E4%B9%A0/">
+                        <span class="hidden-mobile">阅读笔记之打造超人学习</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"00c73fa82dce8163e3da","clientSecret":"d7efdca1ba4ea1aa275608a9f23b02a249415eb0","repo":"mushroomchan.github.io","owner":"mushroomchan","admin":["mushroomchan"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'f0ae08f6c49887af044b11320ab35877'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c88d93a98ba2e164b72952026234ced7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
