@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/null">
-  <link rel="icon" href="/null">
+  <link rel="icon" href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -24,7 +24,7 @@
 <meta property="og:description" content="本篇为多元微积分学习笔记系列第一篇">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-10T12:12:57.000Z">
-<meta property="article:modified_time" content="2022-03-10T12:18:21.288Z">
+<meta property="article:modified_time" content="2022-03-13T13:09:21.762Z">
 <meta property="article:author" content="Dongdong Chen">
 <meta property="article:tag" content="微积分, 数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      229 字
+      9.1k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2 分钟
+      76 分钟
     </span>
   
 
@@ -252,7 +252,251 @@
             
             <div class="markdown-body">
               <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>学会的最好方式就是输出，用自己的话把内容讲一遍。这就是我的学习成果啦，主要是总结下多元微积分的第一章节，向量相关的内容。</p>
-<p>在一元微积分中，我们处理的对象是「数」，从我们会数手指头开始就陪伴我们的东西，而到了多元微积分，处理的对象不再是形单影只的「数」或者说「标量 (Scalar)」，而是本篇的主角——「向量 (Vector)」。因此诸多的多元微积分课程也以向量的介绍作为开篇，关于向量更多的介绍其实在线性代数中，在这里我们只是把与微积分计算相关的内容拎出来。</p>
+<p>在一元微积分中，我们处理的对象是「数number」，从我们会数手指头开始就陪伴我们的东西，而到了多元微积分，处理的对象不再是形单影只的「数」或者说「标量 (Scalar)」，而是本篇的主角——「向量 (Vector)」。因此诸多的多元微积分课程也以向量的介绍作为开篇，关于向量更多的介绍其实在线性代数中，在这里我们只是把与微积分计算相关的内容拎出来。</p>
+<p>本篇是基于 Coursera 的 <a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers/home/week/1">Vector Calculus for Engineers Week1</a> 及对应 Lecture Notes 的内容整理。</p>
+<p>突然发现我这里的翻译不太好，是不是叫做矢量更好，向量有另一层意思，比如二维矢量是向量，张量是标量与矢量的概括与拓展，标量是0维张量，向量是1维张量，矩阵是2维张量，以此类推。</p>
+<h3 id="你好，向量"><a href="#你好，向量" class="headerlink" title="你好，向量"></a>你好，向量</h3><p>向量具有方向和大小，但值得注意的是，向量没有位置，也就是说空间中的任意方向相同且大小相同的向量，它们都是同一个向量。「周游世界的影分身术」</p>
+<p>向量的符号表示在打印情况下通常是使用加粗 $\mathbf{V}$，手写会在头顶加个箭头 $\vec{V}$ 。向量的图形表示是画箭头，箭头的长度代表向量的大小，方向当然代表方向啦。</p>
+<blockquote>
+<p>boldface 黑体 所以latex的命令是 \mathbf{}</p>
+</blockquote>
+<p>定义了向量之后最关心的就是它怎么用，而最基础的使用就是加减乘除运算。接下来看看向量的运算。</p>
+<h5 id="加"><a href="#加" class="headerlink" title="加"></a>加</h5><p>向量的加法具有交换律commutative和结合律associative</p>
+<p>$$\mathbf{A+B=B+A}$$</p>
+<p>$$\mathbf{(A+B)+C=A+(B+C)}$$</p>
+<blockquote>
+<p>习题1: 画图证明结合律</p>
+</blockquote>
+<h5 id="减"><a href="#减" class="headerlink" title="减"></a>减</h5><p>向量的减法可以看作是反向向量的加法，即$\mathbf{A-B=A+(-B)}$</p>
+<p>图形化表示加减时注意，输出向量和两个输入向量头头贴贴，尾尾贴贴则是正的，若头尾贴贴则是负。「自己观察的规律，用于处理相减时分不出谁减水谁」</p>
+<h5 id="乘"><a href="#乘" class="headerlink" title="乘"></a>乘</h5><p>向量的乘法大概可以分为三类，第一类是向量与标量乘，第二类是向量与向量点乘，第三类是向量和向量叉乘。</p>
+<ol>
+<li>向量乘标量</li>
+</ol>
+<p>scalar multiplication</p>
+<p>具有分配律distributive </p>
+<p>$$k(\mathbf{A+B})=k\mathbf{A}+k\mathbf{B}$$</p>
+<blockquote>
+<p>习题2: 证明三角形两条边中点连线平行于第三条边且长度为其一半 「会使用到分配律」</p>
+</blockquote>
+<ol start="2">
+<li>向量乘向量：点积</li>
+</ol>
+<p>dot product / scalar product</p>
+<blockquote>
+<p>maltiply 和 product 还是有点不同的意思的呀</p>
+<p>乘和积有区别吗？区别是什么？</p>
+</blockquote>
+<p><strong>代数定义</strong></p>
+<p>对于向量$\mathbf{A}=A_1i+A_2j+A_3k$ 和向量$\mathbf{B}=B_1i+B_2j+B_3k$</p>
+<p>二者点积计算如下，结果为标量，一个长度，故也称为标量积</p>
+<p>$$\mathbf{A\cdot B}=A_1B_1+A_2B_2+A_3B_3$$</p>
+<p>具有交换律 commutative</p>
+<p>$$\mathbf{A \cdot B=B \cdot A} $$</p>
+<p>分配律 distributive</p>
+<p>$$\mathbf{A\cdot(B+C)=A\cdot B+A \cdot B}$$</p>
+<p>结合律 associative</p>
+<p>$$\mathbf{A\cdot(c B)=(cA)\cdot B=c(A \cdot B)}$$</p>
+<blockquote>
+<p>习题4: 用单位向量证明交换，分配，结合律</p>
+<p>习题5: 列举三维单位向量组合点积的结果</p>
+</blockquote>
+<p><strong>点积的几何解释/几何定义</strong></p>
+<p>图</p>
+<p>几何意义：把两个向量投影到相同的维度，进行数值乘法</p>
+<p>$$\mathbf{A \cdot B=|A||B|}cos \theta$$</p>
+<p>$\theta$ 是向量$\mathbf{A,B}$ 的尾部贴贴的夹角</p>
+<p>当两个向量平行时，即$\theta=0$，则$A\cdot B=|A||B|$，所以向量自己相乘等于长度的平方 $A^2=|A|^2$</p>
+<blockquote>
+<p>突然想到那复数的也是一样的原因导致的吗，好像是的，a+bi也可以看成二维向量？还有共轭那些呢？</p>
+</blockquote>
+<p>当两个向量垂直时，即$\theta= \pi/2$，则$A\cdot B=0$</p>
+<blockquote>
+<p>习题6: 使用点积推导余弦定理 <a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers/supplement/mU0sx/law-of-cosines">题目地址</a></p>
+<p>做错又暴露了我高中数学没学好的事实🤦‍♀️</p>
+<p><a target="_blank" rel="noopener" href="https://wuli.wiki/online/CosThe.html">余弦定理</a> 【梦回十六岁】</p>
+</blockquote>
+<ol start="3">
+<li>向量乘向量：叉乘</li>
+</ol>
+<p>cross product / vector product</p>
+<p><strong>代数定义</strong></p>
+<p>对于向量$\mathbf{A}=A_1i+A_2j+A_3k$ 和向量$\mathbf{B}=B_1i+B_2j+B_3k$</p>
+<p>二者叉乘结果的为向量，故也称为向量积。结果向量的方向遵守右手定则，与两个向量构成的平面垂直，结果向量的大小计算如下<br>$$<br>\boldsymbol{A} \times \boldsymbol{B}=\left|\begin{array}{ccc}<br>\boldsymbol{i} &amp; \boldsymbol{j} &amp; \boldsymbol{k} \<br>A_{1} &amp; A_{2} &amp; A_{3} \<br>B_{1} &amp; B_{2} &amp; B_{3}<br>\end{array}\right|=\left(A_{2} B_{3}-A_{3} B_{2}\right) \boldsymbol{i}+\left(A_{3} B_{1}-A_{1} B_{3}\right) \boldsymbol{j}+\left(A_{1} B_{2}-A_{2} B_{1}\right) \boldsymbol{k}<br>$$</p>
+<blockquote>
+<p>需要知道 $3 \times 3$ 矩阵的行列式计算方法</p>
+</blockquote>
+<blockquote>
+<p>叉乘的结果也叫 normal vector 法线向量，垂直于三维平面的向量</p>
+</blockquote>
+<p>具有反交换律 anticommutative<br>$$<br>\mathbf{A \times B=-B \times A}<br>$$</p>
+<blockquote>
+<p>行列式交换一行，符号变号</p>
+</blockquote>
+<p>分配律 distributive over addition<br>$$<br>\mathbf{A\times(B+C)=A\times B+A\times C}<br>$$<br>结合律 associative 仅针对标量，向量没有<br>$$<br>A \times (cB)=(cA)\times B=c(A\times B)<br>$$</p>
+<blockquote>
+<p>习题7: 用单位向量证明反交换，分配，结合律</p>
+<p>习题8: 列举三维单位向量组合叉乘的结果</p>
+<p>习题9: 举个例子说明叉乘的向量没有结合律</p>
+</blockquote>
+<p><strong>叉乘的几何解释/几何定义</strong></p>
+<p>图</p>
+<p>几何意义：两个向量围成的平行四边形的面积<br>$$<br>\mathbf{|A\times B|=|A||B|}sin\theta<br>$$<br>$\theta$ 是向量$\mathbf{A,B}$ 的尾部贴贴的夹角</p>
+<p>当两个向量平行时，即$\theta=0$，则$A\cdot B=0$，所以向量自己叉乘为0</p>
+<p>当两个向量垂直时，即$\theta= \pi/2$，则$\mathbf{A\cdot B=|A||B|}$</p>
+<blockquote>
+<p>矩形的面积计算公式</p>
+<p>行列式的几何意义是面积/体积</p>
+</blockquote>
+<h3 id="加入坐标系"><a href="#加入坐标系" class="headerlink" title="加入坐标系"></a>加入坐标系</h3><p>前面提到向量是没有位置的，感觉上是有点虚无缥缈。为了可以用数字或者公式来表示向量，我们需要把向量放入坐标系中。这样我们可以更好地计算向量的长度，以及引入一些特殊的向量，如单位向量unit vector，位置向量position vector和位移向量displacment vector。</p>
+<p>坐标系有很多种可以选啦，但基础版本选择笛卡尔坐标系。笛卡尔坐标系的每个轴都互相垂直。下面就以三维笛卡尔坐标系为例。</p>
+<h5 id="向量的长度"><a href="#向量的长度" class="headerlink" title="向量的长度"></a>向量的长度</h5><p>如果我们把一个向量$\mathbf{A}$放入笛卡尔坐标系，向量的尾部在坐标轴原点，令向量头指向的点为 $(A_1,A_2,A_3)$。</p>
+<p>给向量加绝对值符号表示向量的长度，向量$\mathbf{A}$的长度$|\mathbf{A}|$为</p>
+<p>$$<br>|\mathbf{A}|=\sqrt{A_1^2+A_2^2+A_3^2}<br>$$</p>
+<blockquote>
+<p>Pythagorean theorem 毕达哥拉斯定理，勾股定理？</p>
+</blockquote>
+<h5 id="单位向量"><a href="#单位向量" class="headerlink" title="单位向量"></a>单位向量</h5><p>单位向量是长度为1且方向沿坐标轴正方向的向量，对于xyz坐标轴，对应的单位向量分别为$i,j,k$（题外话，这个表示方法来自四元数。</p>
+<blockquote>
+<p>怎么加粗后还是手写体字幕。bf会变成直直的</p>
+</blockquote>
+<p>那么上一节中的向量$\mathbf{A}$可以表示为</p>
+<p>$$\mathbf{A}=A_1i+A_2j+A_3k$$</p>
+<p>用单位向量表示的向量进行运算时，在对应的维度分别进行计算</p>
+<h5 id="位置向量-position-vector"><a href="#位置向量-position-vector" class="headerlink" title="位置向量 position vector"></a>位置向量 position vector</h5><p>不是说向量没有位置的吗，位置向量是怎么回事呢？位置向量 $r$ 是用于定位空间中的特定点$(x,y,z)$的。位置向量的尾部在坐标轴原点，头部指向特定点的位置，用单位向量的形式可以表示为</p>
+<p>$$r=xi+yj+zk$$</p>
+<h5 id="位移向量-displacement-vector"><a href="#位移向量-displacement-vector" class="headerlink" title="位移向量 displacement vector"></a>位移向量 displacement vector</h5><p>位移向量用于描述两个位置向量的差，对于位置向量$r_1,r_2$，位移向量为从一个向量的头指向另一个向量的头。从$r_1$指向$r_2$的位移向量为</p>
+<p>$$r_2-r_1=(x_2-x_1)i+(y_2-y_1)j+(z_2-z_1)k$$</p>
+<blockquote>
+<p>习题3: 万有引力公式的应用</p>
+<p>做错的题暴露了我的认识误区，从1指向2的单位向量计算时是用2-1再除长度得到，我潜意识里想吃1-2，2-1的原因是当1+（2-1）时得到2，这就是从1指向2的意思</p>
+<p>考虑下要不要把题粘一下 <a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers/supplement/ZIZ9q/newtons-equation-for-the-force-between-two-masses">题目地址</a></p>
+</blockquote>
+<h3 id="线与面的解析几何"><a href="#线与面的解析几何" class="headerlink" title="线与面的解析几何"></a>线与面的解析几何</h3><p>用向量来表示线，面等几何元素</p>
+<h4 id="线"><a href="#线" class="headerlink" title="线"></a>线</h4><p>线由两个不同的点确定</p>
+<p>三维情况线表示为参数方程形式 parametric equation</p>
+<p>假设一条线穿过了一个点，该点的位置向量为$r_0$，并且方向和向量$u$平行，那么根据向量加法，这条线的任意一点的位置向量可以表示为<br>$$<br>r=r_0+ut<br>$$<br>其中$t$ 就是参数parameter</p>
+<p>非参数方程nonparametric equation 通过把$t$消去获取<br>$$<br>\frac{x-x_0}{u_1}=\frac{y-y_0}{u_2}=\frac{z-z_0}{u_3}<br>$$</p>
+<blockquote>
+<p>二维情况</p>
+<p>slope-intercept form 斜截式 y=ax+b</p>
+<p>point-slope form 点斜式 y-y1=a(x-x1)</p>
+</blockquote>
+<p><strong>应用</strong></p>
+<p>给定两点，求经过两点的线的参数方程表达形式，以及与某个平面相交的点的坐标。</p>
+<ul>
+<li>给定两点坐标后者减前者，得到位移向量为$u$</li>
+<li>令给定两点中前者为$r_0$</li>
+<li>已知$u$和$r_0$，可以写出 $r$ 的表达式</li>
+<li>若与$z=0$平面相交，则令$(a+bt)k=0$，求解得到$t$，并代入其他维度坐标，获得与平面相交的点的坐标</li>
+</ul>
+<blockquote>
+<p>习题10: 给定两点求参数方程以及与x=0，y=0，z=0分别相交的点的坐标</p>
+</blockquote>
+<h4 id="面"><a href="#面" class="headerlink" title="面"></a>面</h4><p>面由三个不共线的点确定，由这三个点可以得到两个线性独立的位移向量，位移向量的方向平行于平面，两个位移向量的叉乘垂直于平面。「线是用向量加法导出，面是用向量叉乘导出」</p>
+<p>平面上不共线的三个点的位置向量 $r_1,r_2,r_3$</p>
+<p>三个点导出的两个位移向量 $s_1=r_2-r_1$，$s_2=r_3-r_2$</p>
+<p>两个位移向量的叉乘 $N=s_1 \times s_2=ai+bj+ck$，向量$N$与平面点位置向量导出的位移向量垂直</p>
+<blockquote>
+<p>注意这里叉乘的位移向量顺序并不在意，因为无论方向朝上朝下都是垂直于这个平面的</p>
+</blockquote>
+<p>平面上任意一点的位置向量 $r=xi+yj+zk$</p>
+<p>则有<br>$$<br>N\cdot (r-r_i)=0<br>\<br>N \cdot r = N \cdot r_i<br>$$<br>将坐标解析形式代入，则有<br>$$<br>ax+by+cz=d<br>\<br>d=N \cdot r_i<br>$$<br><strong>应用</strong></p>
+<p>给定三点，求经过三点的面的参数方程表达形式，以及与某个平面相交的线。</p>
+<ul>
+<li>给定三点坐标两两相减，得到两个位移向量</li>
+<li>位移向量叉乘，得到$N=ai+bj+ck$</li>
+<li>选择任意一点，计算$d=N \cdot r_i$</li>
+<li>已知$a,b,c,d$，可以写出 $r$ 的表达式</li>
+<li>令表达式中 x/y/z 为0，得到与平面 x=0/y=0/z=0 相交的线的表达式</li>
+</ul>
+<blockquote>
+<p>习题11: 给定三点求参数方程以及与x=0，y=0，z=0分别相交的点的坐标</p>
+</blockquote>
+<h3 id="向量代数"><a href="#向量代数" class="headerlink" title="向量代数"></a>向量代数</h3><p>向量代数的关键是与点乘和叉乘有关的四个恒等式，为了推导证明四个恒等式，需要引入一些简洁的符号标记。主要是Kronecker delta，Levi-Civita symbol，爱因斯坦求和约定。</p>
+<p>Kronecker delta 和 Levi-Civita symbol 都是关于下标的函数</p>
+<h4 id="Kronecker-Delta"><a href="#Kronecker-Delta" class="headerlink" title="Kronecker-Delta"></a>Kronecker-Delta</h4><p>$$<br>\delta_{i j}= \begin{cases}1, &amp; \text { if } i=j \ 0, &amp; \text { if } i \neq j\end{cases}<br>$$</p>
+<p>下标有两个，对于三维空间，每个下标的取值为1，2，3</p>
+<p>表示两个下标相同时为1，不同时为0</p>
+<p>对于三维空间，一共有3*3=9种取值可能，3种为1，6种为0</p>
+<h4 id="Levi-Civita-symbol"><a href="#Levi-Civita-symbol" class="headerlink" title="Levi-Civita symbol"></a>Levi-Civita symbol</h4><p>$$<br>\epsilon_{i j k}=\left{\begin{aligned}<br>+1, &amp; \text { if }(i, j, k) \text { is }(1,2,3),(2,3,1) \text { or }(3,1,2) \<br>-1, &amp; \text { if }(i, j, k) \text { is }(3,2,1),(2,1,3) \text { or }(1,3,2) \<br>0, &amp; \text { if } i=j, \text { or } j=k, \text { or } k=i<br>\end{aligned}\right.<br>$$</p>
+<p>下标有三个，对于三维空间，每个下标的取值为1，2，3</p>
+<p>当下标取值符合顺序循环置换时，值为1，符合逆序循环置换时，值为-1，其他情况值为0</p>
+<p>对于三维空间，一共有3*3*3=27种取值可能，3种为1，3种为-1，21种为0</p>
+<blockquote>
+<p>cyclic permutation 循环置换</p>
+<p>anticyclic permutation 反循环置换</p>
+</blockquote>
+<h4 id="爱因斯坦求和约定"><a href="#爱因斯坦求和约定" class="headerlink" title="爱因斯坦求和约定"></a>爱因斯坦求和约定</h4><p>Einstein summation covention</p>
+<p>将求和符号省去，默认遍历重复的下标相加</p>
+<p>【<del>但是实际上好像没有重复的下标也是全部遍历相加呀，有点不能理解？</del></p>
+<p>没有重复的话就是一个下标标记，并不是全部</p>
+<p>对于三维空间，$\delta_{ii}$是三项求和的缩写，$\delta_{ii}=3$ ，$\delta_{ij}$ 是一项，因为没有重复的下标，所以没有求和</p>
+<h4 id="代数工具箱"><a href="#代数工具箱" class="headerlink" title="代数工具箱"></a>代数工具箱</h4><p><strong>Levi-Civita symbol</strong></p>
+<p>有一个循环置换恒等式 cyclic permutation identities<br>$$<br>\epsilon_{ijk}=\epsilon_{jki}=\epsilon_{kij}<br>$$<br>contraction of two Levi-Civita symbols<br>$$<br>\epsilon_{i j k} \epsilon_{i m n}=\delta_{j m} \delta_{k n}-\delta_{j n} \delta_{k m}<br>$$<br>Kronecker delta 与点乘的结合应用有 contraction of the Kronecker delta with a vector<br>$$<br>\delta_{ij}A_j=A_i<br>$$<br>Kronecker delta 自己点乘的一个恒等式<br>$$<br>\delta_{ik}\delta_{kj}=\delta_{ij}<br>$$</p>
+<blockquote>
+<p>习题14: 证明上面这个恒等式，左式在k上有求和，一共有三项，右式就是一项嗷</p>
+<p>对爱因斯坦求和约定的理解还不够熟悉呀</p>
+</blockquote>
+<p><strong>点乘与叉乘的另一种表示</strong></p>
+<p>使用爱因斯坦求和约定，点乘可以写为<br>$$<br>\mathbf{A \cdot B}=A_iB_i<br>$$<br>叉乘的结果向量的第 $i$ 项可以被写为<br>$$<br>[\mathbf{A \times B}]<em>i=\epsilon</em>{ijk}A_jB_k<br>$$<br><strong>Levi-Civita symbol 和 Kronecker delta 的联系</strong><br>$$<br>\epsilon_{i j k} \epsilon_{l m n}=\left|\begin{array}{ccc}<br>\delta_{i l} &amp; \delta_{i m} &amp; \delta_{i n} \<br>\delta_{j l} &amp; \delta_{j m} &amp; \delta_{j n} \<br>\delta_{k l} &amp; \delta_{k m} &amp; \delta_{k n}<br>\end{array}\right|=\delta_{i l}\left(\delta_{j m} \delta_{k n}-\delta_{j n} \delta_{k m}\right)-\delta_{i m}\left(\delta_{j l} \delta_{k n}-\delta_{j n} \delta_{k l}\right)+\delta_{i n}\left(\delta_{j l} \delta_{k m}-\delta_{j m} \delta_{k l}\right)<br>$$<br>上式是按爱因斯坦求和约定写出，左式实际上是有3*3*3*3*3*3=27*27=729 项。</p>
+<p>从上式的一般形式可以得到两个常用的特殊形式，即第一个下标相同，以及前两个下标相同时的情况<br>$$<br>\epsilon_{i j k} \epsilon_{i m n}=\delta_{j m} \delta_{k n}-\delta_{j n} \delta_{k m}\<br>\quad \epsilon_{i j k} \epsilon_{i j n}=2 \delta_{k n}<br>$$</p>
+<blockquote>
+<p>习题15: 证明上面两个特殊恒等式</p>
+<p>画重点！🌟</p>
+</blockquote>
+<h4 id="四个恒等式"><a href="#四个恒等式" class="headerlink" title="四个恒等式"></a>四个恒等式</h4><p>必须得说，这四个恒等式嗖地一下一起放出来让人看着头晕。</p>
+<p><strong>scalar triple product</strong></p>
+<p>三个向量，结果为标量<br>$$<br>\mathbf{A \cdot (B \times C)=B\cdot(C \times A)=C\cdot(A \times B)}<br>$$<br>观察下形式，左点乘右叉乘，向量 $ABC$ 顺序置换</p>
+<p>用3*3的行列式写，可以表示为<br>$$<br>\boldsymbol{A} \cdot(\boldsymbol{B} \times \boldsymbol{C})=\boldsymbol{A} \cdot\left|\begin{array}{ccc}<br>\boldsymbol{i} &amp; \boldsymbol{j} &amp; \boldsymbol{k} \<br>B_{1} &amp; B_{2} &amp; B_{3} \<br>C_{1} &amp; C_{2} &amp; C_{3}<br>\end{array}\right|=\left|\begin{array}{ccc}<br>A_{1} &amp; A_{2} &amp; A_{3} \<br>B_{1} &amp; B_{2} &amp; B_{3} \<br>C_{1} &amp; C_{2} &amp; C_{3}<br>\end{array}\right|<br>$$</p>
+<blockquote>
+<p>这个向量A可以直接塞进行列式的操作有点惊到我了</p>
+</blockquote>
+<p>几何意义是什么？由A，B，C 三个向量围成的平行六面体 parallelepiped 的体积</p>
+<blockquote>
+<p>习题17: 证明scalar triple 中任意两个向量相等，结果为0。</p>
+<p>习题18: 证明只交换点乘和叉乘符号位置，向量位置不变，结果也不变</p>
+<p>用上点乘的交换律</p>
+</blockquote>
+<p>$$<br>\mathbf{A\cdot B \times C=A\times B \cdot C}<br>$$</p>
+<p><strong>vector triple product</strong></p>
+<p>三个向量，结果为向量<br>$$<br>\mathbf{A \times (B \times C)=(A \cdot C)B-(A\cdot B)C}<br>$$<br>几何意义是什么？</p>
+<p>观察下形式，向量减向量，因为是标量所以没有标点乘符号，有个数乘</p>
+<blockquote>
+<p>我日，我终于看懂了这个证明……<br>$$<br>(\delta_{il}\delta_{jm}-\delta_{im}\delta_{jl})A_jB_lC_m \=A_j\delta_{il}B_l\delta_{jm}C_m-A_j\delta_{jl}B_l\delta_{im}C_m\=A_jB_iC_j-A_jB_jC_i<br>$$</p>
+</blockquote>
+<p><strong>scalar quadruple product</strong></p>
+<p>四个向量，结果为标量<br>$$<br>\mathbf{(A\times B)\cdot(C\times D)=(A\cdot C)(B\cdot D)-(A\cdot D)(B \cdot C)}<br>$$<br>几何意义是什么？</p>
+<p>有点那个符号表示的恒等式的味道</p>
+<p><strong>vector quadruple product</strong></p>
+<p>四个向量，结果为向量<br>$$<br>\mathbf{(A\times B)\times(C\times D)=((A\times B)\cdot D)C-((A\times B)\cdot C)D}<br>$$<br>几何意义是什么？</p>
+<p>向量相减</p>
+<blockquote>
+<p>习题16: 将四个恒等式中可以省去的圆括号 parentheses 去掉</p>
+<p>运算优先级：叉乘 &gt; 点乘 &gt; 数乘</p>
+<p>习题19: 证明 Jacobi恒等式<br>$$<br>\boldsymbol{A} \times(\boldsymbol{B} \times \boldsymbol{C})+\boldsymbol{B} \times(\boldsymbol{C} \times \boldsymbol{A})+\boldsymbol{C} \times(\boldsymbol{A} \times \boldsymbol{B})=0<br>$$<br>习题20: 证明 scalar quadruple product 恒等式</p>
+<p>习题21: 证明 Lagrange’s 恒等式</p>
+<p>习题22: 证明vector quadruple product 恒等式</p>
+<p>令$X=A \times B$，代入 vector triple product证明</p>
+</blockquote>
+<h3 id="标量场与向量场"><a href="#标量场与向量场" class="headerlink" title="标量场与向量场"></a>标量场与向量场</h3><p>「场」Field是指包含空间和时间变量的函数</p>
+<p>标量场是指函数的值为标量，常见的例子有温度<br>$$<br>T(\boldsymbol{r}, t)=T(x, y, z ; t)<br>$$</p>
+<blockquote>
+<p>分号semicolon 用来分开时间和空间相关的变量</p>
+</blockquote>
+<p>向量场是指函数的值为向量，常见的例子有速度，加速度</p>
+<p>用来描述场的方程叫场方程field function，常见的形式是偏微分方程PDE，partial differential equations，</p>
+<p>常见的有Navier-Stokers equation 对流体速度场建模</p>
+<p>Maxwell equation 对电磁场建模</p>
+<p>标量场的方程也叫波方程 wave function</p>
+<p>Schrödinger equation 薛定谔方程 非相对论量子力学 non-relativistic quantum mechanics</p>
+<p>等等</p>
+<p>标量场和向量场的可视化：箭头表示方向，箭头长度表示大小</p>
+<blockquote>
+<p>一些标量场和矢量场的例子：</p>
+<p>Scalar fields: electrostatic potential, gravitational potential, temperature, humidity, concentration, density, pressure, wavefunction of quantum mechanics.</p>
+<p>Vector fields: electric and magnetic fields, magnetic vector potential, velocity, force fields such as gravity.</p>
+</blockquote>
 
             </div>
             <hr>

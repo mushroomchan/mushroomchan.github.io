@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Dongdong Chen">
+  <meta name="keywords" content="还没想好">
+  
+    <meta name="description" content="第一次作业">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS106B-Assignment1">
+<meta property="og:url" content="http://example.com/2022/03/16/CS106B-Assignment1/index.html">
+<meta property="og:site_name" content="🍄蘑菇的碎碎念基地">
+<meta property="og:description" content="第一次作业">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-16T04:14:41.000Z">
+<meta property="article:modified_time" content="2022-03-19T08:31:17.586Z">
+<meta property="article:author" content="Dongdong Chen">
+<meta property="article:tag" content="CS106B">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  <title>CS106B-Assignment1 - 🍄蘑菇的碎碎念基地</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":"c88d93a98ba2e164b72952026234ced7","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>🍄蘑菇的碎碎念基地</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="CS106B-Assignment1">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      Dongdong Chen
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-16 12:14" pubdate>
+        2022年3月16日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.9k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24 分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CS106B-Assignment1</h1>
+            
+            <div class="markdown-body">
+              <p><a target="_blank" rel="noopener" href="https://web.stanford.edu/class/cs106b/assignments/a1/">作业题</a></p>
+<h3 id="1⃣️-Stack-Overflows-⭕️"><a href="#1⃣️-Stack-Overflows-⭕️" class="headerlink" title="1⃣️ Stack Overflows ⭕️"></a>1⃣️ Stack Overflows ⭕️</h3><p>memory ： stack frame</p>
+<p>function call: call stack</p>
+<p>function return stack frame recycled</p>
+<p>too many stack frame need to be create = stack overflow program crash</p>
+<hr>
+<p>Click the “Stack Overflows” option.</p>
+<p><strong>Write down a description of what you saw happen in the file comments of <code>StackOverflow.cpp</code>, up at the top of the file.</strong> </p>
+<blockquote>
+<ul>
+<li>Remember that if function <em>A</em> calls function <em>B</em>, then function <em>B</em> will appear higher on the call stack than function <em>A</em> because function <em>B</em> was called more recently than function <em>A</em>. Make sure you don’t report the cycle in reverse order!</li>
+</ul>
+</blockquote>
+<p>学习用debug</p>
+<h3 id="2⃣️-Only-Connect"><a href="#2⃣️-Only-Connect" class="headerlink" title="2⃣️ Only Connect"></a>2⃣️ Only Connect</h3><p>一个英国谜语玩法 就是去掉元音呗</p>
+<p>自己写测试</p>
+<blockquote>
+<p> In addition to implementing the <code>onlyConnectize</code> function, you will need to add in at least one new test of your own using the <code>STUDENT_TEST</code> macro. To do so, use this syntax:</p>
+</blockquote>
+<p>Be strategic about the tests you add. What are some tricky cases you might want to confirm work correctly? Are there any edge cases (small cases, unusual cases, etc.) that would be worth testing?</p>
+<p>记得总是要从递归函数返回一个值！</p>
+<p>可能用到的函数</p>
+<ol>
+<li>You can convert a <code>char</code> to a <code>string</code> by using the <code>charToString</code> function from <code>&quot;strlib.h&quot;</code>.</li>
+<li>对于char，一个引号，对于string，双引号</li>
+<li>The <code>isalpha</code> function from the <code>&lt;cctype&gt;</code> header takes in a character and returns whether it’s a letter. </li>
+<li>要自己写一个 isconsonant 的helper函数</li>
+<li>You can use <code>toUpperCase</code> from the <code>&quot;strlib.h&quot;</code> header to convert a single character to upper case. It takes in a <code>char</code>, then returns the upper-case version of that letter. If you call <code>toUpperCase</code> on a non-letter character like <code>&#39;$&#39;</code> or <code>&#39;*&#39;</code>, it will return the original character unmodified</li>
+<li>不能使用循环！全部递归</li>
+</ol>
+<p>学习到了</p>
+<ul>
+<li>测试技术，四种情况 equal，-，error，no error</li>
+<li>base case的确定</li>
+<li>helper 函数编写</li>
+<li>code style</li>
+<li>注释</li>
+</ul>
+<h3 id="3⃣️-Playing-Fair"><a href="#3⃣️-Playing-Fair" class="headerlink" title="3⃣️ Playing Fair"></a>3⃣️ Playing Fair</h3><p> Don’t worry about generating sequences of those sorts of orders; stick with loworder sequences, say, with <em>n</em> ≤ 20.</p>
+<p>递归问题，AB轮流</p>
+<p>要写error函数</p>
+<p>好吧我觉得循环更快🤦‍♀️</p>
+<p>就复现一下这个</p>
+<h3 id="4⃣️-Sandpiles"><a href="#4⃣️-Sandpiles" class="headerlink" title="4⃣️ Sandpiles"></a>4⃣️ Sandpiles</h3><p>简单的规则产生复杂的现象</p>
+<p>科学的目标就是去找所谓的统一规则呀</p>
+<p>模拟沙堆</p>
+<p>可能用到的函数</p>
+<p>测试坐标是否超出二维数组边界<code>if (world.inBounds(row, col)) &#123; ... &#125;</code></p>
+<p>建议不要写helper函数</p>
+<p>传入参数 &amp;reference 是不是 传的时候要写* ？ 数组应该不用吧？ ch2.5</p>
+<h3 id="5⃣️-Plotter"><a href="#5⃣️-Plotter" class="headerlink" title="5⃣️ Plotter"></a>5⃣️ Plotter</h3><p>PenStyle 在头文件里定义，要初始化，否则是垃圾变量</p>
+<p>机械臂运动画图命令</p>
+<p>两个控制笔，两个运动，两个画笔特征</p>
+<p>moverel 相对运动</p>
+<p>moveabs 绝对运行</p>
+<p>需要记录当前位置</p>
+<p>一次读文件的一行</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">for</span> (string line; <span class="hljs-built_in">getline</span>(name-of-stream, line); ) &#123; <br>    <span class="hljs-comment">/* ... do something with line ... */</span> <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>C++ 没有内置的 build-in string拆分函数，可以使用</p>
+<p>you can include the header file <code>&quot;strlib.h&quot;</code>, which contains the <code>stringSplit</code>function. You can use <code>stringSplit</code> as follows:</p>
+<p><code>Vector&lt;string&gt; name-of-result = stringSplit(string-to-split, what-to-split-on);</code></p>
+<p> You can take a <code>Vector&lt;string&gt;</code> and use the <code>.size()</code> function to see how many pieces there are, and select individual items out of it using square brackets</p>
+<p>Depending on your approach, you might also want to check out the startsWith function from <code>&quot;strlib.h&quot;</code>. We did not cover how to use the <code>startsWith</code>function in lecture. </p>
+<p>string转为数 You will likely want to use the <code>stringToReal</code> function from “strlib.h”, which takes as input a string representation of a real number and returns that real number. (It’s like the float() command from Python and the Double.parseDouble method from Java)</p>
+<p>*<strong>case-insensitive*</strong> 不区分大小写</p>
+<p>要实现的函数</p>
+<ul>
+<li>The only function we’re providing you is <code>drawLine</code>. All the other steps here – keeping track of where the pen is, what color it is, interpreting what commands to execute, etc. – are for you to take care of.</li>
+</ul>
+<p>参数引用 有用 ch2.5</p>
+<p>拓展部分留待以后再做吧</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3schools.com/colors/colors_picker.asp">HTML color</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CS106B/">CS106B</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/17/CS106B-Assignment2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CS106B-Assignment2</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/15/CS106B-Assignment0/">
+                        <span class="hidden-mobile">CS106B-Assignment0</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"00c73fa82dce8163e3da","clientSecret":"d7efdca1ba4ea1aa275608a9f23b02a249415eb0","repo":"mushroomchan.github.io","owner":"mushroomchan","admin":["mushroomchan"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'bfba57fd936a66da56bc14b7538d7cc9'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- Baidu Analytics -->
+    <script defer>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c88d93a98ba2e164b72952026234ced7";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
