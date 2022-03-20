@@ -24,7 +24,7 @@
 <meta property="og:description" content="本篇为多元微积分学习笔记系列第二篇">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-13T13:19:23.000Z">
-<meta property="article:modified_time" content="2022-03-13T13:20:20.931Z">
+<meta property="article:modified_time" content="2022-03-20T13:43:18.658Z">
 <meta property="article:author" content="Dongdong Chen">
 <meta property="article:tag" content="微积分, 数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4 字
+      12k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1 分钟
+      96 分钟
     </span>
   
 
@@ -251,7 +251,109 @@
             <h1 style="display: none">关于微分的二三事</h1>
             
             <div class="markdown-body">
-              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>冲冲</p>
+              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>多元微积分，就是对向量来算微分和积分，上一篇梳理完向量，这一篇就来到了微分。其实说到微分，常规上是要从极限引入的，但是因为是多元微积分，极限概念默认在一元中已经说过了，所以只是会使用极限来进行定义，但不会再讲了。还有永恒的泰勒公式，也因为同样的原因只初心啊使用，什么时候有空做一元微积分的笔记的时候再补充链接。</p>
+<p>看这一章的时候我逐渐意识到我对大物的抗拒绝大部分是来自于当时微积分没学得太好，在之后的学习工作中觉得大物没有什么意义，微积分也没有线性代数作用大，也是因为我做得偏软件算法的工作，离底层与真实世界有距离。也因为这个原因，其实我也错过了很多新天地，比如空气动力学呀电磁场呀这些有意思的东西，那么希望现在还来得及。</p>
+<p>哦还有求导公式，应该也在一元里讲的，到时候补上，现在用的是</p>
+<p>$\partial(v/u)=(v’u-vu’)/u^2$</p>
+<h3 id="偏微分与它的应用"><a href="#偏微分与它的应用" class="headerlink" title="偏微分与它的应用"></a>偏微分与它的应用</h3><h4 id="偏微分的定义"><a href="#偏微分的定义" class="headerlink" title="偏微分的定义"></a>偏微分的定义</h4><p>偏微分 partial derivative 的定义和一元微分一样，从极限中来，对一个变量计算它的微分时，其他的变量就看作时常值，对于有两个变量的函数$f(x_1,x_2)$，关于 $x_1$ 的一阶偏微分为<br>$$<br>f_{x_1}=\frac{\partial f}{\partial x_1}=\lim <em>{h \rightarrow 0} \frac{f(x_1+h, x_2)-f(x_1, x_2)}{h}<br>$$<br>二阶偏微分为$f</em>{x_1x_1}=\frac{\partial^2 f}{\partial x_1^2}$，还有二阶混合偏微分$f_{x_1x_2}=\frac{\partial^2 f}{\partial x_1x_2}$，对于连续可微函数，二阶混合偏微分的计算顺序无所谓，也就是说$\frac{\partial^2 f}{\partial x_1x_2}=\frac{\partial^2 f}{\partial x_2x_1}$，值得注意的是二阶混合偏微分并不等于两个一阶偏微分相乘。</p>
+<blockquote>
+<p>习题1: 计算给定三变量函数的偏微分</p>
+</blockquote>
+<h4 id="全微分的定义"><a href="#全微分的定义" class="headerlink" title="全微分的定义"></a>全微分的定义</h4><p>全微分是什么呢？一个值？对于函数$f$，全微分的符号是$df$<br>$$<br>\begin{aligned}<br>df&amp;=f(x+dx,y+dy)-f(x,y)<br>\ &amp;=[f(x+d x, y+d y)-f(x, y+d y)]+[f(x, y+d y)-f(x, y)] \<br>&amp;=\frac{\partial f}{\partial x} d x+\frac{\partial f}{\partial y} d y .<br>\end{aligned}<br>$$</p>
+<h4 id="多元泰勒公式"><a href="#多元泰勒公式" class="headerlink" title="多元泰勒公式"></a>多元泰勒公式</h4><p>多元泰勒公式相比于一元泰勒公式，万变不离其宗，对于二变量，其在原点$(x,y)=(0,0)$的展开为<br>$$<br>f(x, y)=f+f_{x} x+f_{y} y+\frac{1}{2 !}\left(f_{x x} x^{2}+2 f_{x y} x y+f_{y y} y^{2}\right)+\ldots<br>$$<br>其中 $f=f(0,0), f_x=f_x(0,0), f_y=f_y(0,0)$。</p>
+<p>还有一个更普适的版本<br>$$<br>f(x+\epsilon,y+\delta)=f(x,y)+\epsilon f_x(x,y)+\delta f_y(x,y)+\cdots<br>$$<br>注意这里的符号要更换一下才能对应上一个公式，但总的意思就是一个在外面，一个在里面，或者把x换成x0，epsilon换成x</p>
+<blockquote>
+<p>习题2: 写出给定函数的泰勒展开</p>
+<p>变量替换呀朋友，一看答案我就会想起来十八岁时不会做的题了……</p>
+<p>记得重做 <a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers/supplement/BSG2Z/taylor-series-expansions">泰勒展开习题</a></p>
+</blockquote>
+<h4 id="最小二乘法"><a href="#最小二乘法" class="headerlink" title="最小二乘法"></a>最小二乘法</h4><p>一阶微分最重要的应用就是来找极值，一个多元函数的局部极大值maxima和局部极小值minima可以通过计算偏微分，令其等于零得到。这些偏微分为0的点叫做函数的critical points。一个偏微分为0的点不一定是极值点，它有可能在一个方向是极小值点在另一个方向是极大值点（马鞍点 saddle point），</p>
+<p>最小二乘法是用来对数据点进行拟合，即构造如下的优化问题<br>$$<br>min\quad g\   g=||f(x_i)-y_i||<em>2^2<br>$$<br>对于线性拟合问题，令$f(x)=ax+b$，待求解变量为$a,b$。计算偏微分，令其为0，<br>$$<br>\frac{\partial g}{\partial a}=\sum</em>{i=1}^{n} x_{i}\left(ax_{i}+b-y_{i}\right)=0\ \frac{\partial g}{\partial b}=\sum_{i=1}^{n}\left(a x_{i} + b -y_{i}\right)=0<br>$$<br>整理一下上式可以写成线性方程组<br>$$<br>\left[\begin{array}{ll}<br>\sum_{i=1}^{n} x_{i}^{2} &amp; \sum_{i=1}^{n} x_{i} \<br>\sum_{i=1}^{n} x_{i} &amp; n<br>\end{array}\right]\left[\begin{array}{a}<br>a \<br>b<br>\end{array}\right]=\left[\begin{array}{b}<br>\sum_{i=1}^{\bar{n}} x_{i} y_{i} \<br>\sum_{i=1}^{n} y_{i}<br>\end{array}\right]<br>$$<br>求解的结果是<br>$$<br>a =\frac{n \sum x_{i} y_{i}-\left(\sum x_{i}\right)\left(\sum y_{i}\right)}{n \sum x_{i}^{2}-\left(\sum x_{i}\right)^{2}} \ \<br>b=\frac{\sum x_{i}^{2} \sum y_{i}-\sum x_{i} y_{i} \sum x_{i}}{n \sum x_{i}^{2}-\left(\sum x_{i}\right)^{2}}<br>$$<br>可以联动一下写代码求解（线性代数</p>
+<h4 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h4><p>对于函数$f=f(x(t),y(t))$，其关于 $t$ 的全微分可以写为，这就使用了链式法则。好吧我好像不太明白怎么推出链式法则的，虽然知道咋用，有机会看看怎么得到的。<br>$$<br>\frac{d f}{d t}=\frac{\partial f}{\partial x} \frac{d x}{d t}+\frac{\partial f}{\partial y} \frac{d y}{d t}<br>$$<br>对于微分方程$\frac{dx}{dt}=u(t,x(t))$，使用链式法则可以得到$\frac{d^2x}{dx^2}$<br>$$<br>\begin{aligned}<br>\frac{d^{2} x}{d t^{2}} &amp;=\frac{\partial u}{\partial t}+\frac{\partial u}{\partial x} \frac{d x}{d t} \<br>&amp;=\frac{\partial u}{\partial t}+u \frac{\partial u}{\partial x}<br>\end{aligned}<br>$$</p>
+<blockquote>
+<p>习题4: 计算给定函数的链式求导</p>
+</blockquote>
+<h4 id="Triple-product-rule"><a href="#Triple-product-rule" class="headerlink" title="Triple product rule"></a>Triple product rule</h4><p>给定三变量函数$f(x,y,z)=0$，可以将其改写为$x=x(y,z)$，$y=y(x,z)$，$z=z(x,y)$。</p>
+<p>对其两边取微分，有<br>$$<br>d x=\frac{\partial x}{\partial y} d y+\frac{\partial x}{\partial z} d z\  d z=\frac{\partial z}{\partial x} d x+\frac{\partial z}{\partial y} d y<br>$$<br>将 $dz$ 代入 $dx$ 的右式，则有<br>$$<br>d x=\frac{\partial x}{\partial y} d y+\frac{\partial x}{\partial z} (\frac{\partial z}{\partial x} d x+\frac{\partial z}{\partial y} d y)<br>$$<br>整理有<br>$$<br>(1 - \frac{\partial x}{\partial z} \frac{\partial z}{\partial x}) d x=(\frac{\partial x}{\partial y} +\frac{\partial x}{\partial z}\frac{\partial z}{\partial y} )d y<br>$$<br>由于 $dx$ 和 $dy$ 是独立变量，所以等式两边都为0，代入可得<br>$$<br>\frac{\partial x}{\partial z} \frac{\partial z}{\partial x}=1<br>$$</p>
+<p>$$<br>\frac{\partial x}{\partial y} = -\frac{\partial x}{\partial z}\frac{\partial z}{\partial y}, \quad<br>\frac{\partial x}{\partial y} \frac{\partial y}{\partial z}\frac{\partial z}{\partial x} =-1<br>$$</p>
+<p>在多元微分中，微分上下是不可以抵消的！（在一元微分中多个相同互为分子分母的微分符号可以抵消）</p>
+<p>第一条式子相乘为1，看起来像是可以抵消，但实际上只是巧合。这个叫做reciprocity relation 互易关系。</p>
+<p>Triple product rule 指的就是第二条像个相乘为-1，如果认为上下抵消是存在的会误以为结果为1。</p>
+<p>这里不能视为抵消的原因是分母和分子表示的不是同一个东西，分子的$\partial x$ 中的 $x$ 是函数，而分母的是变量。意味着保持没出现的那个变量为常数，不是除的意思。</p>
+<p>给了一个理想气体定律 $PV=nRT$ 的例子</p>
+<blockquote>
+<p>习题5: 验证 trple product rule</p>
+<p>习题6: 推导 quadruple product rule</p>
+<p>四个变量的函数，偏导相乘为1，所以这个变量为偶数时是1，奇数时是-1，这个有什么背后的含义吗？</p>
+</blockquote>
+<h3 id="nabla-与它的拓展"><a href="#nabla-与它的拓展" class="headerlink" title="$\nabla$ 与它的拓展"></a>$\nabla$ 与它的拓展</h3><h4 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h4><p>梯度 gradient ，作用于标量场？也可以作用在向量场，整成矩阵了「雅可比矩阵？</p>
+<p>给定函数 $f=f(x,y,z)$ ，它的全微分$df$为<br>$$<br>d f=\frac{\partial f}{\partial x} d x+\frac{\partial f}{\partial y} d y+\frac{\partial f}{\partial z} d z<br>$$<br>按点乘的形式可以把全微分写成两个向量相乘的形式（所以全微分是个标量吼，无穷小位移向量 infinitesimal displacment vector<br>$$<br>d f=\left(\frac{\partial f}{\partial x} \boldsymbol{i}+\frac{\partial f}{\partial y} \boldsymbol{j}+\frac{\partial f}{\partial z} \boldsymbol{k}\right) \cdot(d x \boldsymbol{i}+d y \boldsymbol{j}+d z \boldsymbol{k})=\boldsymbol{\nabla} f \cdot d \boldsymbol{r}<br>$$</p>
+<p>$$<br>\boldsymbol{\nabla} f = \frac{\partial f}{\partial x} \boldsymbol{i}+\frac{\partial f}{\partial y} \boldsymbol{j}+\frac{\partial f}{\partial z} \boldsymbol{k}<br>$$</p>
+<p>我们把 $\boldsymbol{\nabla} f$ 称为梯度gradient，注意它是个向量，梯度把各个变量的偏微分放在了一个向量里。gradient = partial derivative + vector</p>
+<p>符号 $\nabla$ 可以念做 “del”，也可以叫“nabla”。</p>
+<p>由向量点乘的性质可以知道，梯度$\boldsymbol{\nabla}f$ 与无穷小位移量 $d\boldsymbol{r}$ 互相平行的时候（也就是沿梯度方向时），函数的全微分（即变化量）$df$ 的最大，垂直梯度方向时变化最小。</p>
+<blockquote>
+<p>这句话有点不太理解，f的梯度到底是$\nabla f$还是它的幅度？向量还是标量？</p>
+<p>We then say that ∇f points in the direction of maximally increasing f , and the magnitude of ∇f gives the slope (or gradient) of f in that direction.</p>
+</blockquote>
+<p>同时我们可以把 $\boldsymbol{\nabla}$ 看作是向量微分算子，是求空间上的偏分，它的构成是<br>$$<br>\boldsymbol{\nabla}=\boldsymbol{i} \frac{\partial}{\partial x}+\boldsymbol{j} \frac{\partial}{\partial y}+\boldsymbol{k} \frac{\partial}{\partial z}<br>$$<br>此处插播一句，算子operator就是作用在函数上的函数，啥时候正经学一下泛函分析？</p>
+<ul>
+<li><input disabled="" type="checkbox"> 有没有什么方法可视化直觉理解下这个向量微分算子</li>
+</ul>
+<blockquote>
+<p>习题7: 计算梯度</p>
+</blockquote>
+<h4 id="散度-Divergence"><a href="#散度-Divergence" class="headerlink" title="散度 Divergence"></a>散度 Divergence</h4><p>散度 divergence 是标量，它是 $\nabla$ 向量微分算子作用在向量场  $ \boldsymbol{u}$ 上的结果，写作 $\boldsymbol{\nabla} \cdot \boldsymbol{u} $，散度描述了一个向量场从一个点向外spread out 了多少，更数学的描述在后面给出？</p>
+<p>散度的计算如下：<br>$$<br>\begin{aligned}<br>\boldsymbol{\nabla} \cdot \boldsymbol{u} &amp;=\left(\boldsymbol{i} \frac{\partial}{\partial x}+\boldsymbol{j} \frac{\partial}{\partial y}+\boldsymbol{k} \frac{\partial}{\partial z}\right) \cdot\left(u_{1} \boldsymbol{i}+u_{2} \boldsymbol{j}+u_{3} \boldsymbol{k}\right) \<br>&amp;=\frac{\partial u_{1}}{\partial x}+\frac{\partial u_{2}}{\partial y}+\frac{\partial u_{3}}{\partial z}<br>\end{aligned}<br>$$</p>
+<blockquote>
+<p>习题8: 计算散度</p>
+</blockquote>
+<h4 id="旋度-Curl"><a href="#旋度-Curl" class="headerlink" title="旋度 Curl"></a>旋度 Curl</h4><p>旋度 curl 是向量，它是 $\nabla$ 向量微分算子与 向量场 $ \boldsymbol{u}$ 叉乘的结果，写作 $ \boldsymbol{\nabla} \times \boldsymbol{u}$ ，旋度描述了向量场在一个点周围旋转了多少，更数学的描述在后面给出</p>
+<p>旋度的计算如下：<br>$$<br>\boldsymbol{\nabla} \times \boldsymbol{u}=\left|\begin{array}{ccc}<br>\boldsymbol{i} &amp; \boldsymbol{j} &amp; \boldsymbol{k} \<br>\partial / \partial x &amp; \partial / \partial y &amp; \partial / \partial z \<br>u_{1} &amp; u_{2} &amp; u_{3}<br>\end{array}\right| \<br>=\left(\frac{\partial u_{3}}{\partial y}-\frac{\partial u_{2}}{\partial z}\right) \boldsymbol{i}+\left(\frac{\partial u_{1}}{\partial z}-\frac{\partial u_{3}}{\partial x}\right) \boldsymbol{j}+\left(\frac{\partial u_{2}}{\partial x}-\frac{\partial u_{1}}{\partial y}\right) \boldsymbol{k}<br>$$<br>几个知识点：</p>
+<ul>
+<li>梯度的旋度为零  $\boldsymbol{\nabla} \times (\boldsymbol{\nabla}f)=\boldsymbol{0}$ 这个是向量0</li>
+<li>旋度的散度为零 $\boldsymbol{\nabla} \cdot (\boldsymbol{\nabla} \times \boldsymbol{u})=0$ 这个是标量0</li>
+</ul>
+<blockquote>
+<p>习题9: 计算旋度</p>
+</blockquote>
+<p>总结一下，梯度，散度，旋度，分别对应着 $\nabla$ 与场的数乘，点乘，叉乘。</p>
+<h4 id="拉普拉斯算子-Laplacian"><a href="#拉普拉斯算子-Laplacian" class="headerlink" title="拉普拉斯算子 Laplacian"></a>拉普拉斯算子 Laplacian</h4><p>题外话，以前看到拉普拉斯算子总觉得是要进行拉普拉斯变换🤦‍♀️</p>
+<p>拉普拉斯算子符号是 $\nabla ^2$，计算为<br>$$<br>\nabla ^2=\boldsymbol{\nabla} \cdot \boldsymbol{\nabla}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}<br>$$<br>拉普拉斯算子可以作用在标量场，也可以作用在矢量场</p>
+<p>对于标量场 $f=f(x,y,z)$，可以看作是梯度的散度，结果是标量<br>$$<br>\nabla ^2=\boldsymbol{\nabla} \cdot (\boldsymbol{\nabla}f)=\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2}f}{\partial y^{2}}+\frac{\partial^{2}f}{\partial z^{2}}<br>$$<br>对于矢量场 $\boldsymbol{u}=u_1(x,y,z)\boldsymbol{i}+u_2(x,y,z)\boldsymbol{j}+u_3(x,y,z)\boldsymbol{k}$ ，是分别作用于每一个分量上，结果是向量<br>$$<br>\nabla^{2} \boldsymbol{u}=\nabla^{2} u_{1} \boldsymbol{i}+\nabla^{2} u_{2} \boldsymbol{j}+\nabla^{2} u_{3} \boldsymbol{k}<br>$$<br>拉普拉斯算子出现在一些经典的偏微分方程中</p>
+<ul>
+<li>Laplace equation 拉普拉斯方程 $\nabla^{2} \Phi=0$</li>
+<li>wave equation 波方程 $\quad \frac{\partial^{2} \Phi}{\partial t^{2}}=c^{2} \nabla^{2} \Phi$</li>
+<li>diffusion equation 扩散方程 $\quad \frac{\partial \Phi}{\partial t}=D \nabla^{2} \Phi$</li>
+</ul>
+<blockquote>
+<p>习题11: 求拉普拉斯</p>
+</blockquote>
+<h3 id="微分恒等式与它的应用"><a href="#微分恒等式与它的应用" class="headerlink" title="微分恒等式与它的应用"></a>微分恒等式与它的应用</h3><p>符号含义：</p>
+<p>标量场 $f=f(\boldsymbol{r)}$ ，矢量场 $\boldsymbol{u}=\boldsymbol{u}(\boldsymbol{r}),\boldsymbol{v}=\boldsymbol{v}(\boldsymbol{r}) $ , 位置向量 $\boldsymbol{r}$ 。</p>
+<p>$\boldsymbol{u}=u_1\boldsymbol{i}+u_2\boldsymbol{j}+u_3\boldsymbol{k}$</p>
+<p>$\boldsymbol{v}=v_1\boldsymbol{i}+v_2\boldsymbol{j}+v_3\boldsymbol{k}$</p>
+<p>$\boldsymbol{r} =r_1\boldsymbol{i}+r_2\boldsymbol{j}+r_3\boldsymbol{k}$</p>
+<h4 id="八个恒等式"><a href="#八个恒等式" class="headerlink" title="八个恒等式"></a>八个恒等式</h4><p>一共有八个恒等式，不需要全部记住，用到的时候来查就可以了<br>$$<br>\begin{aligned}<br>\nabla \times \nabla f&amp;=0 \ \<br>\nabla \cdot( \nabla \times u)&amp;=0 \ \<br>\boldsymbol{\nabla} \times(\boldsymbol{\nabla} \times \boldsymbol{u}) &amp;=\boldsymbol{\nabla}(\boldsymbol{\nabla }\cdot \boldsymbol{u})-\nabla^{2} \boldsymbol{u} \ \<br>\nabla \cdot(f u) &amp;=u \cdot \nabla f+f \nabla \cdot u \ \<br>\nabla \times(f u) &amp;=\nabla f \times u+f \nabla \times u \ \<br>\nabla(u \cdot v) &amp;=(u \cdot \nabla) v+(v \cdot \nabla) u+u \times(\nabla \times v)+v \times(\nabla \times u) \ \<br>\boldsymbol{\nabla} \cdot(\boldsymbol{u} \times \boldsymbol{v}) &amp;=\boldsymbol{v} \cdot(\boldsymbol{\nabla} \times \boldsymbol{u})-\boldsymbol{u} \cdot(\boldsymbol{\nabla} \times \boldsymbol{v}) \ \<br>\boldsymbol{\nabla} \times(\boldsymbol{u} \times \boldsymbol{v}) &amp;=\boldsymbol{u}(\boldsymbol{\nabla} \cdot \boldsymbol{v})-\boldsymbol{v}(\boldsymbol{\nabla} \cdot \boldsymbol{u})+(\boldsymbol{v} \cdot \boldsymbol{\nabla}) \boldsymbol{u}-(\boldsymbol{u} \cdot \boldsymbol{\nabla}) \boldsymbol{v}<br>\end{aligned}<br>$$</p>
+<hr>
+<p>对于 $\boldsymbol{u} \cdot \boldsymbol{\nabla}$，作用在标量场和向量场时有不同</p>
+<p>标量场<br>$$<br>\boldsymbol{u} \cdot \boldsymbol{\nabla} f=u_{1} \frac{\partial f}{\partial x_{1}}+u_{2} \frac{\partial f}{\partial x_{2}}+u_{3} \frac{\partial f}{\partial x_{3}}<br>$$<br>向量场「为什么是这样呀，我有点不理解」<br>$$<br>(\boldsymbol{u} \cdot \boldsymbol{\nabla}) \boldsymbol{v} =\boldsymbol{u} \cdot \boldsymbol{\nabla}\boldsymbol{v}=\left(\boldsymbol{u} \cdot \boldsymbol{\nabla} v_{1}\right) \boldsymbol{i}+\left(\boldsymbol{u} \cdot \boldsymbol{\nabla} v_{2}\right) \boldsymbol{j}+\left(\boldsymbol{u} \cdot \boldsymbol{\nabla} v_{3}\right) \boldsymbol{k}<br>$$</p>
+<h4 id="恒等式的证明方法"><a href="#恒等式的证明方法" class="headerlink" title="恒等式的证明方法"></a>恒等式的证明方法</h4><p>使用Levi-Civita，Kronecker delta 和爱因斯坦求和符号来证明。</p>
+<p>del 叉乘 向量场<br>$$<br>(\boldsymbol{\nabla} \times \boldsymbol{u})<em>{i}=\epsilon</em>{i j k} \frac{\partial u_{k}}{\partial x_{j}}<br>$$<br>del 点乘 向量场<br>$$<br>\boldsymbol{\nabla} \cdot \boldsymbol{u}=\frac{\partial u_{i}}{\partial x_{i}}<br>$$<br>关于第7条恒等式的证明 「有空把其他的也证一下」<br>$$<br>\begin{aligned}<br>\boldsymbol{\nabla} \cdot(\boldsymbol{u} \times \boldsymbol{v}) &amp;=\frac{\partial}{\partial x_{i}}\left(\epsilon_{i j k} u_{j} v_{k}\right) \<br>&amp;=\epsilon_{i j k} \frac{\partial u_{j}}{\partial x_{i}} v_{k}+\epsilon_{i j k} u_{j} \frac{\partial v_{k}}{\partial x_{i}} \<br>&amp;=v_{k} \epsilon_{k i j} \frac{\partial u_{j}}{\partial x_{i}}-u_{j} \epsilon_{j i k} \frac{\partial v_{k}}{\partial x_{i}} \<br>&amp;=\boldsymbol{v} \cdot(\boldsymbol{\nabla} \times \boldsymbol{u})-\boldsymbol{u} \cdot(\boldsymbol{\nabla} \times \boldsymbol{v})<br>\end{aligned}<br>$$</p>
+<ul>
+<li>$u,v$ 是关于 $x$ 的函数，所以第二步可以链式法则展开「The crucial step in the proof is the use of the product rule for the derivative」</li>
+</ul>
+<blockquote>
+<p>习题12: 证明第三，四条恒等式</p>
+<p>习题13: 写微分方程的解 material acceleration</p>
+<p><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/vector-calculus-engineers/supplement/RhgLR/the-material-acceleration">题目</a></p>
+</blockquote>
+<h4 id="电磁波与麦克斯韦方程组"><a href="#电磁波与麦克斯韦方程组" class="headerlink" title="电磁波与麦克斯韦方程组"></a>电磁波与麦克斯韦方程组</h4><p>麦克斯韦方程组如下，其中$\mu_{0}, \epsilon_{0} $ 分别是自由空间？free space 的 介电常数permittivity 和 渗透率 permeability<br>$$<br>\begin{aligned}<br>\boldsymbol{\nabla} \cdot \boldsymbol{E} &amp;=0\ \boldsymbol{\nabla} \cdot \boldsymbol{B} &amp;=0\ \boldsymbol{\nabla} \times \boldsymbol{E} &amp;=-\frac{\partial \boldsymbol{B}}{\partial t}\<br>\boldsymbol{\nabla} \times \boldsymbol{B}&amp;=\mu_{0} \epsilon_{0} \frac{\partial \boldsymbol{E}}{\partial t}<br>\end{aligned}<br>$$<br>从麦克斯韦方程组可以推导出电场 $\boldsymbol{E}$，推导方法是对第三条方程，左右两边求旋度curl，并交换时间和空间偏导<br>$$<br>\boldsymbol{\nabla} \times(\boldsymbol{\nabla} \times \boldsymbol{E})=-\frac{\partial}{\partial t}(\nabla \times \boldsymbol{B})<br>$$<br>使用八条恒等式中的第三条恒等式，可以得到<br>$$<br>\boldsymbol{\nabla}(\boldsymbol{\nabla} \cdot \boldsymbol{E})-\nabla^{2} \boldsymbol{E}=-\frac{\partial}{\partial t}(\boldsymbol{\nabla} \times \boldsymbol{B})<br>$$<br>将第一条方程代入左式，第四条方程代入右式，则有<br>$$<br>\frac{\partial^{2} \boldsymbol{E}}{\partial t^{2}}=c^{2} \nabla^{2} \boldsymbol{E}<br>$$<br>这个偏微分方程描述了电场的时间与空间变化的关系，其中 $c$ 是真空中的光速，$c=1 / \sqrt{\mu_{0} \epsilon_{0}} \approx 3 \times 10^{8} \mathrm{~m} / \mathrm{s}$ 。可以用来测算光速。</p>
+<blockquote>
+<p>习题14: 推导出磁场的偏微分方程</p>
+<p>磁场的和电场的公式推出来是一样的，把 $\boldsymbol{E}$ 换成 $\boldsymbol{B}$ 就行了，这就是波函数，不管啥场的波函数都一样？为什么呀？</p>
+</blockquote>
+<p>二十五岁终于惊叹一句麦克斯韦方程真牛呀</p>
 
             </div>
             <hr>
